@@ -11,6 +11,18 @@
 # end
 
 # These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+ActiveSupport::Inflector.inflections do |inflect|
+   inflect.irregular 'categoria', 'categorias'
+   inflect.irregular 'processo_geral', 'processos_gerais'
+   inflect.irregular 'taxa_protocolo', 'taxas_protocolo'
+   inflect.irregular 'concessionario', 'concessionarios'
+   inflect.irregular 'funcionario', 'funcionarios'
+   inflect.irregular 'lote', 'lotes'
+   inflect.irregular 'municipe', 'municipes'
+   inflect.irregular 'cemiterio', 'cemiterios'
+   inflect.irregular 'processo', 'processos'
+   inflect.irregular 'permuta', 'permutas'
+   inflect.irregular 'parcela', 'parcelas'
+   inflect.irregular 'processo_exclusao_comisso', 'processos_exclusao_comisso'
+   inflect.irregular 'requerente', 'requerentes'
+ end
