@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quadra: MyString
+  terreno: MyString
+  gleba: MyString
+  rua: MyString
+  avenida: MyString
+  largura: 1.5
+  comprimento: 1.5
+  tipo_construcao: MyString
+  qtd_gaveta: 1
+  qtd_ossario: 1
+  estado: MyString
+  concessionario_id: 
+  cemiterio_id: 
+
+two:
+  quadra: MyString
+  terreno: MyString
+  gleba: MyString
+  rua: MyString
+  avenida: MyString
+  largura: 1.5
+  comprimento: 1.5
+  tipo_construcao: MyString
+  qtd_gaveta: 1
+  qtd_ossario: 1
+  estado: MyString
+  concessionario_id: 
+  cemiterio_id: 

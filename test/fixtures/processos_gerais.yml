@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero: MyString
+  tipo: MyString
+  observacoes: MyString
+  livro: MyString
+  folha: MyString
+  resolucao: MyString
+  lote_id: 
+
+two:
+  numero: MyString
+  tipo: MyString
+  observacoes: MyString
+  livro: MyString
+  folha: MyString
+  resolucao: MyString
+  lote_id: 

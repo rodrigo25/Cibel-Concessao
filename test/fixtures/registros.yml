@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  descricao: MyString
+  data: 2015-12-21 17:50:28
+  funcionario_id: 
+
+two:
+  tipo: MyString
+  descricao: MyString
+  data: 2015-12-21 17:50:28
+  funcionario_id: 

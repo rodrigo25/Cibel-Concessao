@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_processo: MyString
+  tipo: MyString
+  situacao: MyString
+  processo_id: 
+
+two:
+  num_processo: MyString
+  tipo: MyString
+  situacao: MyString
+  processo_id: 

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_cadastro: 1
+  dt_abertura: 2015-12-21 17:52:46
+  valor: 9.99
+  dt_baixa: MyString
+  situacao: MyString
+  municipe_id: 
+  requerente_id: 
+  concessionario_id: 
+  processo_geral_id: 
+
+two:
+  num_cadastro: 1
+  dt_abertura: 2015-12-21 17:52:46
+  valor: 9.99
+  dt_baixa: MyString
+  situacao: MyString
+  municipe_id: 
+  requerente_id: 
+  concessionario_id: 
+  processo_geral_id: 
