@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151221175309) do
+ActiveRecord::Schema.define(version: 20151222174629) do
 
   create_table "categorias", force: :cascade do |t|
     t.decimal  "valor"
@@ -44,6 +44,17 @@ ActiveRecord::Schema.define(version: 20151221175309) do
   end
 
   add_index "concessionarios", ["requerente_id"], name: "index_concessionarios_on_requerente_id"
+
+  create_table "funcionarios", force: :cascade do |t|
+    t.string   "RF"
+    t.string   "nome"
+    t.string   "password_digest"
+    t.string   "email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "funcionarios", ["RF"], name: "index_funcionarios_on_RF"
 
   create_table "lotes", force: :cascade do |t|
     t.string   "quadra"
@@ -190,16 +201,5 @@ ActiveRecord::Schema.define(version: 20151221175309) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "RF"
-    t.string   "nome"
-    t.string   "password_digest"
-    t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  add_index "users", ["RF"], name: "index_users_on_RF"
 
 end
