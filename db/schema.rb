@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151222174629) do
+ActiveRecord::Schema.define(version: 20151222183522) do
 
   create_table "categorias", force: :cascade do |t|
     t.decimal  "valor"
@@ -193,6 +193,7 @@ ActiveRecord::Schema.define(version: 20151222174629) do
     t.datetime "updated_at",    null: false
   end
 
+  add_index "requerentes", ["CPF"], name: "index_requerentes_on_CPF", unique: true
   add_index "requerentes", ["municipe_id"], name: "index_requerentes_on_municipe_id"
 
   create_table "taxas_protocolo", force: :cascade do |t|
