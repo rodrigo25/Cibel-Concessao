@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lote_id: 
+  processo_geral_id: 
+
+two:
+  lote_id: 
+  processo_geral_id: 

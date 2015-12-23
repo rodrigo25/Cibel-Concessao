@@ -25,4 +25,5 @@ ActiveSupport::Inflector.inflections do |inflect|
    inflect.irregular 'parcela', 'parcelas'
    inflect.irregular 'processo_exclusao_comisso', 'processos_exclusao_comisso'
    inflect.irregular 'requerente', 'requerentes'
+   inflect.irregular 'processo_geral_lote', 'processos_gerais_lotes'
  end
