@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223161540) do
+ActiveRecord::Schema.define(version: 20151223124601) do
 
   create_table "categorias", force: :cascade do |t|
     t.decimal  "valor"
@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 20151223161540) do
   create_table "cemiterios", force: :cascade do |t|
     t.string   "nome"
     t.string   "endereco"
-    t.integer  "CEP"
+    t.string   "CEP"
     t.string   "telefone"
     t.string   "bairro"
     t.string   "celular"
     t.string   "fax"
-    t.datetime "prazo_concessao"
+    t.string   "prazo_concessao"
     t.integer  "categoria_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -165,22 +165,14 @@ ActiveRecord::Schema.define(version: 20151223161540) do
     t.string   "livro"
     t.string   "folha"
     t.string   "resolucao"
+    t.integer  "lote_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
+  add_index "processos_gerais", ["lote_id"], name: "index_processos_gerais_on_lote_id"
   add_index "processos_gerais", ["numero"], name: "index_processos_gerais_on_numero"
   add_index "processos_gerais", ["tipo"], name: "index_processos_gerais_on_tipo"
-
-  create_table "processos_gerais_lotes", force: :cascade do |t|
-    t.integer  "lote_id"
-    t.integer  "processo_geral_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
-  add_index "processos_gerais_lotes", ["lote_id"], name: "index_processos_gerais_lotes_on_lote_id"
-  add_index "processos_gerais_lotes", ["processo_geral_id"], name: "index_processos_gerais_lotes_on_processo_geral_id"
 
   create_table "registros", force: :cascade do |t|
     t.string   "tipo"

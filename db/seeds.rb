@@ -13,16 +13,16 @@ C = Categoria.create(valor: 2082.89)
 D = Categoria.create(valor: 1389.50)
 
 # CADASTRO DE TAXAS
-Taxa_Protocolo.create(tipo: 'Gaveta', valor: 884.44)
-Taxa_Protocolo.create(tipo: 'Ossário', valor: 24.50)
-Taxa_Protocolo.create(tipo: 'Expediente', valor: 15.50)
-Taxa_Protocolo.create(tipo: 'Carta de Concessão', valor: 22.35)
+TaxaProtocolo.create(tipo: 'Gaveta', valor: 884.44)
+TaxaProtocolo.create(tipo: 'Ossário', valor: 24.50)
+TaxaProtocolo.create(tipo: 'Expediente', valor: 15.50)
+TaxaProtocolo.create(tipo: 'Carta de Concessão', valor: 22.35)
 
 # CADASTRO DE ADMIM
-Funcionario.create(RF: '0000000', nome: 'Admin', senha: '123456', email: 'admin@admin.com')
+Funcionario.create(RF: '0000000', nome: 'Admin', password_digest: '123456', email: 'admin@admin.com')
 # CADASTRO DE FUNCIONÁRIOS
-Funcionario.create(RF: '6666666', nome: 'Rodrigo', senha: '123456', email: 'rodrigo@cibel.com')
-Funcionario.create(RF: '9999999', nome: 'Lucas', senha: '123456', email: 'lucas@cibel.com')
+Funcionario.create(RF: '6666666', nome: 'Rodrigo', password_digest: '123456', email: 'rodrigo@cibel.com')
+Funcionario.create(RF: '9999999', nome: 'Lucas', password_digest: '123456', email: 'lucas@cibel.com')
 
 #CADASTRO DE MUNICIPE
 municipe_joao = Municipe.create(nome: 'João da Silva', RG: '789652146', telefone: '5551-2596', endereco: 'Rua Lord Cockrane, 428')
@@ -65,9 +65,9 @@ Cemiterio.create(nome:'Vila Nova Cachoeirinha', endereco: 'Rua João Marcelino B
 
 #CADASTRO DE LOTES
 lote1 = Lote.create(quadra:'2', terreno: '147', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'livre', cemiterio: dom_bosco)
-lote1 = Lote.create(quadra:'2', terreno: '732', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'concedido', concessionario: concessionario_joao, cemiterio: dom_bosco)
-lote1 = Lote.create(quadra:'3', terreno: '19', gleba: '1', rua: '7', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'concedido', concessionario: concessionario_maria, cemiterio: dom_bosco)
-lote1 = Lote.create(quadra:'8', terreno: '195', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'livre', cemiterio: dom_bosco)
+lote2 = Lote.create(quadra:'2', terreno: '732', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'concedido', concessionario: concessionario_joao, cemiterio: dom_bosco)
+lote3 = Lote.create(quadra:'3', terreno: '19', gleba: '1', rua: '7', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'concedido', concessionario: concessionario_maria, cemiterio: dom_bosco)
+lote4 = Lote.create(quadra:'8', terreno: '195', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'livre', cemiterio: dom_bosco)
 
 
 #CADASTRO DE PROCESSO GERAL
