@@ -1,0 +1,38 @@
+html, body, .container-table {
+    height: 100%;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle; 
+}
+
+.link-div {
+    color: #3c3334;
+    &:hover {
+        text-decoration: none;
+        color: #3c3334;
+    }
+    &:active {
+        text-decoration: none;
+        color: #3c3334;
+    }
+}
+
+#home-vel {
+    th {
+        text-align: center;
+    }
+}
+
+@media print {
+  .noPrint {
+    display: none;
+  }
+}
+
+@media screen {
+  .justPrint {
+    display: none;
+  }
+}

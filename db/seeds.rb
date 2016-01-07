@@ -19,10 +19,10 @@ TaxaProtocolo.create(tipo: 'Expediente', valor: 15.50)
 TaxaProtocolo.create(tipo: 'Carta de Concessão', valor: 22.35)
 
 # CADASTRO DE ADMIM
-Funcionario.create(RF: '0000000', nome: 'Admin', password_digest: '123456', email: 'admin@admin.com')
+Funcionario.create(RF: '0000000', nome: 'Admin', password: '123456', email: 'admin@admin.com')
 # CADASTRO DE FUNCIONÁRIOS
-Funcionario.create(RF: '6666666', nome: 'Rodrigo', password_digest: '123456', email: 'rodrigo@cibel.com')
-Funcionario.create(RF: '9999999', nome: 'Lucas', password_digest: '123456', email: 'lucas@cibel.com')
+Funcionario.create(RF: '6666666', nome: 'Rodrigo', password: '123456', email: 'rodrigo@cibel.com')
+Funcionario.create(RF: '9999999', nome: 'Lucas', password: '123456', email: 'lucas@cibel.com')
 
 #CADASTRO DE MUNICIPE
 municipe_joao = Municipe.create(nome: 'João da Silva', RG: '789652146', telefone: '5551-2596', endereco: 'Rua Lord Cockrane, 428')
