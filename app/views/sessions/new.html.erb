@@ -1,5 +1,4 @@
 	<div class="logo">Cibel Concessão</div>
-	
 			<div class="login">
 				<div class="campos-login">
 				<div class="conteudo-login">
@@ -12,6 +11,13 @@
 							<%= f.password_field :password, placeholder: ' Senha', class: 'caixa' %>
 						</li>
 						<li>
+							<% if @controle_entrou == true%>
+								<p>RF ou Senha incorreto</p>
+							<% elsif %>
+								<p>&nbsp</p>
+							<% end %>
+						</li>
+						<li>
 							<%= f.submit "Acessar", id: 'acessar', class: "myButton" %>
 						</li>
 					<ul>
@@ -20,4 +26,3 @@
 			</div>
 			</div>
 	</div>
-	
