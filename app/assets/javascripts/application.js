@@ -14,11 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap
 
-//= require plugins/datepicker/bootstrap-datepicker
-//= require plugins/daterangepicker/daterangepicker
-
-//= require bootstrap.min
-//= require admin-lte
+//= require app
+//= require demo
 
 //= require moment-with-locales
 //= require_tree .
