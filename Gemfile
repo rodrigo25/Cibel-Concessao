@@ -14,6 +14,7 @@ gem 'gon'
 gem 'table_print'
 gem 'squeel'
 gem 'tzinfo-data'
+gem 'coffee-script-source', '1.8.0'
 
 gem 'adminlte2-rails'
 
