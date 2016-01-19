@@ -56,8 +56,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    childprocess (0.5.9)
-      ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -88,8 +86,6 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
-    ffi (1.9.10)
-    ffi (1.9.10-x86-mingw32)
     font-awesome-sass (4.5.0)
       sass (>= 3.2)
     gherkin (2.12.2)
@@ -174,7 +170,6 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
-    rubyzip (1.1.7)
     sass (3.4.20)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -185,11 +180,6 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    selenium-webdriver (2.48.1)
-      childprocess (~> 0.5)
-      multi_json (~> 1.0)
-      rubyzip (~> 1.0)
-      websocket (~> 1.0)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -209,6 +199,8 @@ GEM
     tilt (2.0.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2015.7)
+      tzinfo (>= 1.0.0)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -217,7 +209,6 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    websocket (1.2.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -243,9 +234,9 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  selenium-webdriver
   sqlite3
   squeel
   table_print
+  tzinfo-data
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

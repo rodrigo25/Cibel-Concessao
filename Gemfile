@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'gon'
 gem 'table_print'
 gem 'squeel'
+gem 'tzinfo-data'
 
 gem 'adminlte2-rails'
 
@@ -27,7 +28,6 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'factory_girl_rails', '~> 4.0'
 	gem 'capybara'
-	gem 'selenium-webdriver'
 end
 
 group :development do
