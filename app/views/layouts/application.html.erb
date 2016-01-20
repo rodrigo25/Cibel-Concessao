@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cibel</title>
+  <title>Cibel - Concessão</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -12,9 +12,7 @@
     <div>      
       <%= render 'layouts/header' if params[:controller] != 'sessions' %>  
     </div>    
-    <div class="container-fluid">
     	<%= yield %>    	
-    </div>
     <div>      
       <%= render 'layouts/footer' %>      
     </div>

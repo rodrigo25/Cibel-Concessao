@@ -302,6 +302,7 @@ a:focus {
 }
 .main-header .logo .logo-lg {
   display: block;
+  margin-left: -1px;
 }
 .main-header .logo .logo-mini {
   display: none;
