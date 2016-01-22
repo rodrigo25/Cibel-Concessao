@@ -7,7 +7,7 @@
     <div class="user-panel" >
       <div class="info" >
         <!-- NOME DO FUNCIONARIO QUE ESTÁ LOGADO-->
-        <p>(nome_do_funcionario_logado)</p>
+        <p><%= current_funcionario.nome %></p>
       </div>
     </div>
 
@@ -15,15 +15,82 @@
     <ul class="sidebar-menu">
       <li class="header">MENU</li>
       <!-- Optionally, you can add icons to the links -->
-      <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-      <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+      
+      <!-- Cadastros -->
       <li class="treeview">
-        <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <a href="#"><i class="fa fa-edit"></i> <span>Cadastros</span> <i class="fa fa-angle-left pull-right"></i></a>
         <ul class="treeview-menu">
-          <li><a href="#">Link in level 2</a></li>
-          <li><a href="#">Link in level 2</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Concessão</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Renovação</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Reconcessão</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Regularização</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Diferência de Área</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Faixa de Terreno</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Permuta</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Exclusão de Comisso</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Comisso</a></li>
         </ul>
       </li>
+      
+      <!-- Buscas -->
+      <li class="active"><a href="#"><i class="fa fa-search"></i> <span>Buscas</span></a></li>
+      
+      <!-- Processos -->
+      <li class="treeview">
+        <a href="#"><i class="fa fa-folder-open"></i> <span>Processos</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i>Controle de Processos</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Transferência de Processos</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Cancelamento de Processo</a></li>
+        </ul>
+      </li>
+      
+      <!-- Lotes -->
+      <li class="treeview">
+        <a href="#"><i class="fa fa-th"></i> <span>Lotes</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i>Controle de Lotes</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Terrrenos Duplicados</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Livro e Folha duplicados</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Busca de Lotes</a></li>
+        </ul>
+      </li>
+      
+      <!-- Financeiro -->
+      <li class="treeview">
+        <a href="#"><i class="fa fa-dollar"></i> <span>Financeiro</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i>Guias de Recolhimento</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Arquivos Banco do Brasil</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Acompanhamento de Carnê</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Cancelamento de Débito</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Controle de Pagamentos</a></li>
+        </ul>
+      </li>
+      
+      <!-- Documentos -->
+      <li><a href="#"><i class="fa fa-file-text"></i> <span>Documentos</span></a></li>
+      
+      <!-- Relatórios -->
+      <li class="treeview">
+        <a href="#"><i class="fa fa-files-o"></i> <span>Relatórios</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i>Relatórios...</a></li>
+        </ul>
+      </li>
+      
+      <!-- Configurações -->
+      <li class="treeview">
+        <a href="#"><i class="fa fa-gear"></i> <span>Configurações</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i>Usuários</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Cemitérios</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Valores Base</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Funcionários</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Controle de Uso</a></li>
+        </ul>
+      </li>
+      
     </ul><!-- /.sidebar-menu -->
   </section>
   <!-- /.sidebar -->
