@@ -1,28 +1,18 @@
-	<div class="logo">Cibel Concessão</div>
-			<div class="login">
-				<div class="campos-login">
-				<div class="conteudo-login">
-					<%= form_for(:session, url: login_path) do |f| %>
-					<ul class="user-password">
-						<li>
-							<%= f.text_field :rf, class: 'caixa', maxlength: 7, placeholder: ' RF', autofocus: true %>
-						</li>
-						<li>
-							<%= f.password_field :password, placeholder: ' Senha', class: 'caixa' %>
-						</li>
-						<li>
-							<% if @controle_entrou == true%>
-								<p>RF ou Senha incorreto</p>
-							<% elsif %>
-								<p>&nbsp</p>
-							<% end %>
-						</li>
-						<li>
-							<%= f.submit "Acessar", id: 'acessar', class: "myButton" %>
-						</li>
-					<ul>
-					<% end %>
-				</div>
-			</div>
-			</div>
+<div class="login-box">
+	<div class="login-box-body">
+		<p class="login-box-msg">
+			Faça login para iniciar sua sessão
+		</p>						
+		<%= form_for(:session, url: login_path) do |f| %>
+		<div class="form-group has-feedback">
+			<%= f.text_field :rf, class: 'form-control', maxlength: 7, placeholder: ' RF', autofocus: true %>
+			<span class="fa-user form-control-feedback"></span>
+		</div>
+		<div class="form-group has-feedback">
+			<%= f.password_field :password, placeholder: ' Senha', class: 'form-control' %>
+			<span class="glyphicon glyphicon-inbox	 form-control-feedback"></span>
+		</div>	
+		<%= f.submit "Acessar", id: 'acessar', class: "btn btn-primary btn-block btn-flat" %>
+		<% end %>
 	</div>
+</div>
