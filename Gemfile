@@ -16,8 +16,6 @@ gem 'squeel'
 gem 'tzinfo-data'
 gem 'coffee-script-source', '1.8.0'
 
-gem 'adminlte2-rails'
-
 
 
 group :development, :test do

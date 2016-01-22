@@ -13,9 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-
+//
 //= require app
-//= require demo
-
-//= require moment-with-locales
+//= require npm
+//
+//= require plugins/select2/select2.full
+//= require plugins/select2/i18n/pt-BR
+//
+//= require plugins/input-mask/jquery.inputmask.date.extensions
+//= require plugins/input-mask/jquery.inputmask.extensions
+//= require plugins/input-mask/jquery.inputmask
+//= require plugins/input-mask/jquery.inputmask.numeric.extensions
+//= require plugins/input-mask/jquery.inputmask.phone.extensions
+//= require plugins/input-mask/jquery.inputmask.regex.extensions
+//
+//
 //= require_tree .

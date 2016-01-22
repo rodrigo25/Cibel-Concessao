@@ -28,14 +28,14 @@
 <body class="hold-transition fixed skin-blue sidebar-mini">
   <div class="wrapper">
     <div>      
-      <%= render 'layouts/header'%>  
+      <%= render 'layouts/header' if params[:controller] != 'sessions' %>  
     </div>
     <div>     
       <%= render 'layouts/sidebar' if params[:controller] != 'sessions' %>  
     </div>    
     	<%= yield %>    	
     <div>      
-      <%= render 'layouts/footer' %>      
+      <%= render 'layouts/footer' if params[:controller] != 'sessions' %>  
     </div>
   </div>
   <!-- REQUIRED JS SCRIPTS -->
