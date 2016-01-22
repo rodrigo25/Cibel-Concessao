@@ -72,6 +72,13 @@ body {
     height: 50px;
   }
 
+.img-footer{
+  position: fixed;
+  right: -220px;
+  margin-right: 230px;
+  margin-top: -12px;
+}
+
 .layout-top-nav .content-wrapper,
 .layout-top-nav .right-side,
 .layout-top-nav .main-footer {
