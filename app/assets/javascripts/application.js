@@ -27,5 +27,6 @@
 //= require plugins/input-mask/jquery.inputmask.phone.extensions
 //= require plugins/input-mask/jquery.inputmask.regex.extensions
 //
+//= require plugins/wizard/jquery.bootstrap.wizard
 //
 //= require_tree .

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'cadastros/concessao'
+
+  get 'cadastros/renovacao'
+
   root 'sessions#new'
   
   get  'login'                => 'sessions#new'
