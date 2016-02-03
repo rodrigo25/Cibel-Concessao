@@ -1,4 +1,12 @@
 module ApplicationHelper
+  
+  def sem_layout
+    if params[:controller] == 'sessions' || params[:controller] == 'lock'
+      return true
+    else
+      return false
+    end
+  end
 
   def log_in(funcionario)
     session[:funcionario_id] = funcionario.id
