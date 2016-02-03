@@ -10,9 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+<<<<<<< HEAD
 //
 //= require app
 //= require npm
@@ -30,3 +32,6 @@
 //= require plugins/wizard/jquery.bootstrap.wizard
 //
 //= require_tree .
+=======
+//= require_tree ../../../vendor/assets/javascripts/.
+>>>>>>> inicio

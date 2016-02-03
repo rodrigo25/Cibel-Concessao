@@ -5,16 +5,14 @@ class SessionsController < ApplicationController
   	redirect_to home_path if logged_in?
   end
 
-#	@controle_entrou = false
 
 	def create
 		funcionario = Funcionario.find_by(RF: params[:session][:rf].downcase)
 		if funcionario && funcionario.authenticate(params[:session][:password])
 		  log_in(funcionario)
 		  redirect_to home_path
-		  flash[:notice] = "You have successfully logged out."
+		  # flash[:notice] = "You have successfully logged out."
 		else
-			@controle_entrou = true
 		  render 'new'
 		end
 	end
