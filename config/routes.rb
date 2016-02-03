@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   delete 'logout'             => 'sessions#destroy'
   
   get  'home'                 => 'home#home'
+  get  'lockscreen'           => 'lock#lockscreen'
+  post 'unlock'               => 'lock#unlock'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

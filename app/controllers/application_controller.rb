@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   
   before_filter :user_logado?
+  before_filter :user_locked?
   
   private
   
@@ -13,6 +14,10 @@ class ApplicationController < ActionController::Base
     if !logged_in? && params[:controller] != 'sessions'  
       redirect_to login_path
     end
+  end
+  
+  def user_locked?
+    redirect_to lockscreen_path if session[:lock] && params[:controller] != 'lock'
   end
   
 end

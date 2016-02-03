@@ -10,22 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//
-//= require app
-//= require npm
-//
-//= require plugins/select2/select2.full
-//= require plugins/select2/i18n/pt-BR
-//
-//= require plugins/input-mask/jquery.inputmask.date.extensions
-//= require plugins/input-mask/jquery.inputmask.extensions
-//= require plugins/input-mask/jquery.inputmask
-//= require plugins/input-mask/jquery.inputmask.numeric.extensions
-//= require plugins/input-mask/jquery.inputmask.phone.extensions
-//= require plugins/input-mask/jquery.inputmask.regex.extensions
-//
-//
-//= require_tree .
+//= require_tree ../../../vendor/assets/javascripts/.
