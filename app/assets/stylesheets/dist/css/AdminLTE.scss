@@ -3187,9 +3187,12 @@ table.text-center th {
 .login-logo,
 .register-logo {
   font-size: 35px;
+  margin-top: -10px;
   text-align: center;
-  margin-bottom: 5px;
   font-weight: 300;
+  img {
+    width: 80%;
+  }
 }
 .login-logo a,
 .register-logo a {
@@ -3215,12 +3218,18 @@ table.text-center th {
 .login-box-body,
 .register-box-body {
   background: #fff;
+  opacity: 0.8;
   padding: 20px;
   border-top: 0;
   border-radius: 10px;
   box-shadow: 2px 2px 10px #899;
   color: #666;
 }
+
+.login-box-body:hover {
+  opacity: 0.88;
+}
+
 .login-box-body .form-control-feedback,
 .register-box-body .form-control-feedback {
   color: #777;

@@ -1,15 +1,16 @@
 
+<%= image_tag("background.jpg", style: "position: fixed;")%>
 <div class="login-box">
 	<div class="login-box-body">
 		<div class="login-logo">
-			<b>Cibel</b>
+		<%= image_tag("logo-preto.png")%>
 		</div>
 		<p class="login-box-msg">
 			Faça login para iniciar sua sessão
 		</p>						
 		<%= form_for(:session, url: login_path) do |f| %>
 		<div class="form-group has-feedback">
-			<%= f.text_field :rf, class: 'form-control', maxlength: 7, placeholder: ' RF', autofocus: true %>
+			<%= f.text_field :rf, class: 'form-control', maxlength: 7, placeholder: 'RF', autofocus: true %>
 			<span class="fa fa-user form-control-feedback"></span>
 		</div>
 		<div class="form-group has-feedback">
