@@ -313,14 +313,21 @@ a:focus {
   padding: 0 15px;
   font-weight: 300;
   overflow: hidden;
+  img {
+  width: 60%;
+  margin-top: -5px;  
+  }
 }
+
 .main-header .logo .logo-lg {
   display: block;
   margin-left: -1px;
 }
 .main-header .logo .logo-mini {
   display: none;
+  width: 200%;
 }
+
 .main-header .navbar-brand {
   color: #fff;
 }
