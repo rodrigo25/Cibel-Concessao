@@ -19,7 +19,7 @@
       <ul class="nav navbar-nav">
         <!-- Messages: style can be found in dropdown.less-->
         <li>
-          <%= link_to lockscreen_path do %>
+          <%= link_to lockscreen_path(:request_url => request.url) do %>
             <i class="fa fa-lock"></i>
           <% end %>
         </li>
