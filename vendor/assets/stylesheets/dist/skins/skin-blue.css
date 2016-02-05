@@ -3,7 +3,7 @@
  * ----------#E17B3C
  */
 .skin-blue .main-header .navbar {
-  #background: -webkit-radial-gradient(60% 55%, closest-side, red, yellow, black); 
+  /*HEAAADER*/
   background: linear-gradient(to right, #b4581e, #ef9e6c);
 }
 .skin-blue .main-header .navbar .nav > li > a {
@@ -44,7 +44,9 @@
   }
 }
 .skin-blue .main-header .logo {
-  background-color: #A3470E; 
+  /*LOGOOO*/
+  background: linear-gradient(to right, #222d32, #b4581e);
+  #background-color: #A3470E; 
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
@@ -60,6 +62,7 @@
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
+  /*SIDEBAR*/
   background-color: #222d32;
 }
 
