@@ -1,9 +1,10 @@
 /*
  * Skin: Blue
- * ----------
+ * ----------#E17B3C
  */
 .skin-blue .main-header .navbar {
-  background-color: #E17B3C;
+  #background: -webkit-radial-gradient(60% 55%, closest-side, red, yellow, black); 
+  background: linear-gradient(to right, #b4581e, #ef9e6c);
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -29,7 +30,7 @@
   color: #fff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-  background-color: #CD6C2F;
+  background-color: #A3470E ;
 }
 @media (max-width: 767px) {
   .skin-blue .main-header .navbar .dropdown-menu li.divider {
