@@ -1,5 +1,4 @@
-
-  <!-- Content Header (Page header) -->
+ <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
       Concessão
@@ -19,49 +18,33 @@
 
 	<div id="rootwizard">
     <!-- Default box -->
-    <div class="box box-success">
-      <div class="box-header">
-        <!-- <h3 class="box-title">Title</h3> -->
-       
-			
-        
+    <div class="box box-warning">
+
+      <div class="box-body chat" id="chat-box">
+
+
         <!-- Tabs Steps -->
-        <div class="navbar" style="float: left;">
-        	<div class="navbar-left">
-        		<div class="box-tools">
-          		<ul class="pager wizard">
-          			<li class="next"><a href="#">Next</a></li>
-								<!-- <li class="previous" style="float: left;"><a href="#">Previous</a></li> -->
-							</ul>
-        		</div>
-        	</div>
+        <div class="navbar" style="align: center">
 	  			<div class="navbar-inner">
 	    			<div class="container">
 							<ul>
-	  						<li><a href="#tab1" data-toggle="tab">First</a></li>
-								<li><a href="#tab2" data-toggle="tab">Second</a></li>
-								<li><a href="#tab3" data-toggle="tab">Third</a></li>
-								<li><a href="#tab4" data-toggle="tab">Forth</a></li>
-								<li><a href="#tab5" data-toggle="tab">Fifth</a></li>
-								<li><a href="#tab6" data-toggle="tab">Sixth</a></li>
-								<li><a href="#tab7" data-toggle="tab">Seventh</a></li>
+	  						<li><a href="#tab1" data-toggle="tab">Processo</a></li>
+								<li><a href="#tab2" data-toggle="tab">Requerente</a></li>
+								<li><a href="#tab3" data-toggle="tab">Lote</a></li>
+								<li><a href="#tab4" data-toggle="tab">Pagamento</a></li>
+								<li><a href="#tab5" data-toggle="tab">Emissão de Guias</a></li>
 							</ul>
 	 					</div>
 	  			</div>
 				</div>
        
-        
-        <div class="box-tools pull-right">
-          <ul class="pager wizard">
-          	<li class="next"><a href="#">Next</a></li>
-						<!-- <li class="previous" style="float: left;"><a href="#">Previous</a></li> -->
-					</ul>
-        </div>
-        
-      </div>
-      <div class="box-body chat" id="chat-box">
-        
+				<ul class="pager wizard">
+					<!-- <li class="previous" style="float: left;"><a href="#">Previous</a></li> -->
+					<li class="next"><a href="#">Next</a></li>
+				</ul>
+
 				<div class="tab-content">
+					
 					
 					<div class="tab-pane" id="tab1">
 						
@@ -76,7 +59,8 @@
 									
 									
 									<div class="form-group row">
-                  	<label for="concessao-requerente-nome" class="col-sm-2 control-label">Nome:</label>
+										
+                  	<label for="concessao-requerente-nome" class="col-sm-2 control-label label-align">Nome:</label>
                     <div class="col-sm-3">
                     	<input type="text" class="form-control" id="concessao-requerente-nome">
 										</div>
@@ -94,11 +78,11 @@
 									
 									<div class="form-group row">
                   	<label for="concessao-requerente-dtnasc" class="col-sm-2 control-label">Dt. Nascimento:</label>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                     	<input type="text" class="form-control" id="concessao-requerente-dtnasc">
 										</div>
 										
-                    <label class="col-sm-1">Estado Civíl:</label>
+                    <label class="col-sm-offset-1 col-sm-1" style="text-align: left;">Estado Civíl:</label>
                     <div class="col-xs-2">
                     	<select class="form-control">
                     		<option>Solteiro(a)</option>
@@ -169,13 +153,13 @@
                     	<input type="text" class="form-control" id="concessao-requerente-rua">
 										</div>
 										
-										<label for="concessao-requerente-numero" class="col-sm-1 control-label">Nº:</label>
+										<label for="concessao-requerente-numero" class="col-sm-1 control-label">Numero:&nbsp&nbsp</label>
                     <div class="col-sm-1">
                     	<input type="text" class="form-control" id="concessao-requerente-numero">
 										</div>
 										
 										<label for="concessao-requerente-compl" class="col-sm-1 control-label">Compl.:</label>
-                    <div class="col-sm-1">
+                    <div class="col-sm-2">
                     	<input type="text" class="form-control" id="concessao-requerente-compl">
 										</div>
 										
@@ -191,8 +175,8 @@
                     	<input type="text" class="form-control" id="concessao-requerente-cidade">
 										</div>
 										
-                    <label class="col-sm-1">UF:</label>
-                    <div class="col-xs-1">
+                    <label class="col-sm-1" style="align: right">UF:</label>
+                    <div class="col-sm-2">
                     	<select class="form-control">
                     		<option>AC</option>
                       	<option>AL</option>
@@ -218,23 +202,13 @@
                       	<option>RO</option>
                       	<option>RR</option>
                       	<option>SC</option>
-                      	<option>SP</option>
+                      	<option selected>SP</option>
                       	<option>SE</option>
                       	<option>TO</option>
 											</select>
 										</div>	
                   </div>
 									
-                  
-                  <div class="form-group">
-                  	<div class="col-sm-offset-2 col-sm-10">
-                    	<div class="checkbox">
-                      	<label>
-                        	<input type="checkbox"> Remember me
-												</label>
-											</div>
-										</div>
-									</div>
 									
 								</div><!-- /.box-body -->
 							</form>
@@ -249,8 +223,18 @@
 							
 						Número do Processo
             <div class="col-xs-3">
-      				<input type="text" class="form-control" placeholder=".col-xs-3">
+      				<input type="text" class="form-control" placeholder="id=concessao-requerente-cep">
 			      </div>
+                  
+           	<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+            		<div class="checkbox">
+              		<label>
+                		<input type="checkbox"> Remember me
+									</label>
+								</div>
+							</div>
+						</div>
                   
 	  			</div>
 	  			
@@ -264,12 +248,6 @@
 					<div class="tab-pane" id="tab5">
 						5
 					</div>
-					<div class="tab-pane" id="tab6">
-						6
-					</div>
-					<div class="tab-pane" id="tab7">
-						7
-					</div>        
 				</div>	
 			</div><!-- /.box-body -->
         
