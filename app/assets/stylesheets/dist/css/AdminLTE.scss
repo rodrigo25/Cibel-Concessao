@@ -1301,7 +1301,9 @@ a:focus {
   border-radius: 0;
   border-color: #d2d6de;
   background-color: #fff;
+  width: 20px;
 }
+
 /* button groups */
 .btn-group-vertical .btn.btn-flat:first-of-type,
 .btn-group-vertical .btn.btn-flat:last-of-type {
@@ -3132,53 +3134,87 @@ table.text-center th {
 .lockscreen-logo {
   font-size: 35px;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   font-weight: 300;
 }
 .lockscreen-logo a {
   color: #444;
 }
-.lockscreen-wrapper {
-  max-width: 400px;
-  margin: 0 auto;
+
+.lockscreen-wrapper .lockscreen-block {
+  margin: 10% auto 0 auto;
   margin-top: 10%;
+  width: 300px;
+  height: 220px;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 80%;
+  }
 }
+
+.lockscreen-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(asset-path('background.jpg'));
+  height: 100%;
+  width: 100%;
+}
+
+.lockscreen-bg {
+  position: fixed;
+  width: 700px;
+  height: 400px;
+}
+
 /* User name [optional] */
-.lockscreen .lockscreen-name {
+.lockscreen-name {
   text-align: center;
   font-weight: 600;
+  color: white;
 }
+
 /* Will contain the image and the sign in form */
 .lockscreen-item {
-  border-radius: 4px;
-  padding: 0;
+  border-radius: 20px;
   background: #fff;
   position: relative;
   margin: 10px auto 30px auto;
   width: 290px;
 }
 /* User image */
-.lockscreen-image {
+.lockscreen-wrapper .lockscreen-block .lockscreen-image {
   border-radius: 50%;
   position: absolute;
-  left: -10px;
-  top: -25px;
+  #left: -5px;
+  top: -14px;
   background: #fff;
-  padding: 5px;
+  padding: 1px;
   z-index: 10;
-}
-.lockscreen-image > img {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+  img {
+    margin-top: 7px;
+    width: 70%;
+  }
 }
 /* Contains the password input and the login button */
 .lockscreen-credentials {
   margin-left: 70px;
 }
 .lockscreen-credentials .form-control {
+  width: 180px;
   border: 0;
 }
+
+/*.lockscreen-item .input-group {
+  width: 100%;
+  margin-left: 500px;
+}*/
+
 .lockscreen-credentials .btn {
   background-color: #fff;
   border: 0;
