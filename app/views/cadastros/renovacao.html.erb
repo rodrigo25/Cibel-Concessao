@@ -1,44 +1,42 @@
-<div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <h1>
-      Concessão
-      <small>Cadastros</small>
-    </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-      <li class="active">Here</li>
-    </ol>
-  </section>
-
-  <!-- Main content -->
-  <section class="content">
-
-
-
-
-    <!-- Default box -->
-    <div class="box box-success">
-      <div class="box-header">
-        <!-- <h3 class="box-title">Title</h3> -->
-        
-        
-        <div class="box-tools pull-right">
-        </div>
-        
+<div id="rootwizard">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul>
+      	  <li><a href="#tab1" data-toggle="tab">Processo</a></li>
+      		<li><a href="#tab2" data-toggle="tab">Requerente</a></li>
+      		<li><a href="#tab3" data-toggle="tab">Concessionário</a></li>
+      		<li><a href="#tab4" data-toggle="tab">Lote</a></li>
+      		<li><a href="#tab5" data-toggle="tab">Pagamento</a></li>
+      		<li><a href="#tab6" data-toggle="tab">Emissão de Guias</a></li>
+        </ul>
       </div>
-      
-      <div class="box-body chat" id="chat-box">
-         a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>
+	  </div>
+	</div>
+	<%= form_tag renovacao_form_path do %>
+		<div class="tab-content">
+		  <div class="tab-pane" id="tab1">
+		    <%= render 'cadastros/partials/renovacao/a_processo' %>
+		  </div>
+		  <div class="tab-pane" id="tab2">
+		    <%= render 'cadastros/partials/renovacao/b_requerente' %>
+		  </div>
+			<div class="tab-pane" id="tab3">
+		    <%= render 'cadastros/partials/renovacao/c_concessionario' %>
+	    </div>
+			<div class="tab-pane" id="tab4">
+		    <%= render 'cadastros/partials/renovacao/d_lote' %>
+	    </div>
+			<div class="tab-pane" id="tab5">
+		    <%= render 'cadastros/partials/renovacao/e_pagamento' %>
 			</div>
-    
-    	<div class="box-footer">
-
-			</div><!-- /.box-footer-->
-		</div><!-- /.box-body -->
-
-
-
-    <!-- Your Page Content Here -->
-  </section><!-- /.content -->
-</div><!-- /.content-wrapper -->
+			<div class="tab-pane" id="tab6">
+		    <%= render 'cadastros/partials/renovacao/f_emissao_de_guias' %>
+			</div>
+			<ul class="pager wizard">
+				<li class="previous"><a href="#">Anterior</a></li>
+				<li class="next"><a href="#">Próximo</a></li>
+			</ul>
+		</div>
+	<% end %>
+</div>
