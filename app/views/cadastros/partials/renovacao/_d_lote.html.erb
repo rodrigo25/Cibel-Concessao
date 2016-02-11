@@ -1,1 +1,4 @@
-4
+Terreno <br><br>
+
+Cemitério
+<%= select_tag "lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }) %> <br>
