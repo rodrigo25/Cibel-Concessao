@@ -1,1 +1,67 @@
-3
+<div style="display: inline-block;">
+  
+Requerente é o Concessionário 
+<%= check_box_tag "concessionario?" %> <br><br>
+
+Dados Pessoais <br><br>
+
+Nome
+<%= text_field_tag "concessionario_municipe[nome]" %> <br>
+concessionario_
+RG
+<%= text_field_tag "concessionario_municipe[RG]" %> <br>
+
+CPF
+<%= text_field_tag "concessionario_requerente[CPF]" %> <br>
+
+Data de Nascimento
+<%= select_day(1, prefix: "concessionario_requerente[dt_nascimento]") %>
+<%= select_month(1, prefix: "concessionario_requerente[dt_nascimento]") %>
+<%= select_year(1900, start_year: 1900, end_year: Time.now.year, prefix: "requerente[dt_nascimento]") %> <br>
+
+Estado Civil
+<%= select_tag "concessionario_requerente[estado_civil]", options_for_select([ "Solteiro(a)", "Casado(a)" ]) %> <br>
+
+Nacionalidade
+<%= text_field_tag "concessionario_requerente[nacionalidade]" %> <br>
+
+Profissão
+<%= text_field_tag "concessionario_requerente[profissao]" %> <br>
+
+Email
+<%= email_field_tag "concessionario_requerente[email]" %> <br>
+
+Telefone
+<%= text_field_tag "concessionario_municipe[telefone]" %> <br>
+
+Celular
+<%= text_field_tag "concessionario_requerente[celular]" %>
+
+</div>
+
+<div style="display: inline-block;">
+
+Endereço <br><br>
+
+CEP
+<%= text_field_tag "concessionario_requerente[CEP]" %> <br>
+
+Rua
+<%= text_field_tag "concessionario_municipe[rua]" %> <br>
+
+Número
+<%= text_field_tag "concessionario_municipe[numero]" %> <br>
+
+Complemento
+<%= text_field_tag "concessionario_municipe[complemento]" %> <br>
+
+Bairro
+<%= text_field_tag "concessionario_requerente[bairro]" %> <br>
+
+Cidade
+<%= text_field_tag "concessionario_requerente[cidade]" %> <br>
+
+UF
+<%= select_tag "concessionario_requerente[estado]" , options_for_select(estados) %> <br>
+
+</div>
