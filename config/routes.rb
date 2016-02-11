@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get  'home'                 => 'home#home'
   get  'lockscreen'           => 'lock#lockscreen'
   post 'unlock'               => 'lock#unlock'
+  
+  get  'renovacao'            => 'cadastros#renovacao'
+  post 'renovacao_form'       => 'cadastros#renovacao_form'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
