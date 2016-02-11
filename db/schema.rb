@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223124601) do
+ActiveRecord::Schema.define(version: 20160211173442) do
 
   create_table "categorias", force: :cascade do |t|
     t.decimal  "valor"
@@ -95,9 +95,11 @@ ActiveRecord::Schema.define(version: 20151223124601) do
     t.string   "nome"
     t.string   "RG"
     t.string   "telefone"
-    t.string   "endereco"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "numero"
+    t.string   "rua"
+    t.string   "complemento"
   end
 
   add_index "municipes", ["RG"], name: "index_municipes_on_RG"

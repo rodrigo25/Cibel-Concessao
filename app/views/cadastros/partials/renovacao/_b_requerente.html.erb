@@ -1,54 +1,64 @@
+<div style="display: inline-block;">
+
 Dados Pessoais <br><br>
 
 Nome
-<%= text_field_tag "municipe[:nome]" %> <br>
+<%= text_field_tag "municipe[nome]" %> <br>
 
 RG
-<%= text_field_tag "municipe[:RG]" %> <br>
+<%= text_field_tag "municipe[RG]" %> <br>
 
 CPF
-<%= text_field_tag "requerente[:CPF]" %> <br>
+<%= text_field_tag "requerente[CPF]" %> <br>
 
 Data de Nascimento
-<%= text_field_tag "requerente[:dt_nascimento]" %> <br>
+<%= select_day(1, prefix: "requerente[dt_nascimento]") %>
+<%= select_month(1, prefix: "requerente[dt_nascimento]") %>
+<%= select_year(1900, start_year: 1900, end_year: Time.now.year, prefix: "requerente[dt_nascimento]") %> <br>
 
 Estado Civil
-<%= text_field_tag "requerente[:estado_civil]" %> <br>
+<%= select_tag "requerente[estado_civil]", options_for_select([ "Solteiro(a)", "Casado(a)" ]) %> <br>
 
 Nacionalidade
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "requerente[nacionalidade]" %> <br>
 
 Profissão
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "requerente[profissao]" %> <br>
 
 Email
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= email_field_tag "requerente[email]" %> <br>
 
 Telefone
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "municipe[telefone]" %> <br>
 
 Celular
-<%= text_field_tag "processo_geral[:numero]" %> <br><br>
+<%= text_field_tag "requerente[celular]" %>
+
+</div>
+
+<div style="display: inline-block;">
 
 Endereço <br><br>
 
 CEP
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "requerente[CEP]" %> <br>
 
 Rua
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "municipe[rua]" %> <br>
 
 Número
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "municipe[numero]" %> <br>
 
 Complemento
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "municipe[complemento]" %> <br>
 
 Bairro
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "requerente[bairro]" %> <br>
 
 Cidade
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= text_field_tag "requerente[cidade]" %> <br>
 
 UF
-<%= text_field_tag "processo_geral[:numero]" %> <br>
+<%= select_tag "requerente[estado]" , options_for_select(estados) %> <br>
+
+</div>
