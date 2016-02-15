@@ -2,3 +2,39 @@ Terreno <br><br>
 
 Cemitério
 <%= select_tag "lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }) %> <br>
+
+Quadra
+<%= text_field_tag "lote[quadra]" %> <br>
+
+Terreno
+<%= text_field_tag "lote[terreno]" %> <br>
+
+Gleba
+<%= text_field_tag "lote[gleba]" %> <br>
+
+Rua
+<%= text_field_tag "lote[rua]" %> <br>
+
+Avenida
+<%= text_field_tag "lote[avenida]" %> <br>
+
+<span id="ajax_renovacao_lote" class="btn btn-warning"><i class="fa fa-search"></i>Buscar</span> <br>
+
+<ul id="ul"></ul>
+
+Informações adicionais <br><br>
+
+Largura
+<%= text_field_tag "lote[largura]" %> <br>
+
+Comprimento
+<%= text_field_tag "lote[comprimento]" %> <br>
+
+Tipo de Construção
+<%= select_tag "lote[tipo_construcao]", options_for_select([ "Capela", "Carneiro", "Columbário", "Gaveta" ]) %> <br>
+
+Quantidade de Gavetas
+<%= text_field_tag "lote[qtd_gaveta]" %> <br>
+
+Quantidade de Ossuários
+<%= text_field_tag "lote[qtd_ossario]" %> <br>
