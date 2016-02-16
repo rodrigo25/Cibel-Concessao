@@ -1,7 +1,7 @@
 Terreno <br><br>
 
 Cemitério
-<%= select_tag "lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }) %> <br>
+<%= select_tag "lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }), :prompt => "" %> <br>
 
 Quadra
 <%= text_field_tag "lote[quadra]" %> <br>
@@ -18,9 +18,29 @@ Rua
 Avenida
 <%= text_field_tag "lote[avenida]" %> <br>
 
-<span id="ajax_renovacao_lote" class="btn btn-warning"><i class="fa fa-search"></i>Buscar</span> <br>
+<span id="ajax_renovacao_lote_buscar" class="btn btn-warning"><i class="fa fa-search"></i>Buscar</span> <br>
+<span id="ajax_renovacao_lote_criar_novo_lote" class="btn btn-warning"><i class="fa fa-search"></i>Criar novo lote</span> <br>
+<span id="ajax_renovacao_lote_limpar" class="btn btn-warning"><i class="fa fa-search"></i>Limpar</span> <br>
 
-<ul id="ul"></ul>
+<div id="table-wrapper">
+    <div id="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th><span class="text">Quadra</span></th>
+            <th><span class="text">Terreno</span></th>
+            <th><span class="text">Gleba</span></th>
+            <th><span class="text">Rua</span></th>
+            <th><span class="text">Avenida</span></th>
+            <th><span class="text">Concessionário</span></th>
+            <th><span class="text">Estado</span></th>
+          </tr>
+        </thead>
+        <tbody id="corpo_tabela">
+        </tbody>
+      </table>
+    </div>
+</div>
 
 Informações adicionais <br><br>
 
@@ -31,7 +51,7 @@ Comprimento
 <%= text_field_tag "lote[comprimento]" %> <br>
 
 Tipo de Construção
-<%= select_tag "lote[tipo_construcao]", options_for_select([ "Capela", "Carneiro", "Columbário", "Gaveta" ]) %> <br>
+<%= select_tag "lote[tipo_construcao]", options_for_select([ "", "Capela", "Carneiro", "Columbário", "Gaveta" ]) %> <br>
 
 Quantidade de Gavetas
 <%= text_field_tag "lote[qtd_gaveta]" %> <br>

@@ -64,10 +64,10 @@ Cemiterio.create(nome:'Vila Nova Cachoeirinha', endereco: 'Rua João Marcelino B
 
 
 #CADASTRO DE LOTES
-lote1 = Lote.create(quadra:'2', terreno: '147', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'livre', cemiterio: dom_bosco)
-lote2 = Lote.create(quadra:'2', terreno: '732', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'concedido', concessionario: concessionario_joao, cemiterio: dom_bosco)
-lote3 = Lote.create(quadra:'3', terreno: '19', gleba: '1', rua: '7', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'concedido', concessionario: concessionario_maria, cemiterio: dom_bosco)
-lote4 = Lote.create(quadra:'8', terreno: '195', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'carneiro', estado: 'livre', cemiterio: dom_bosco)
+lote1 = Lote.create(quadra:'2', terreno: '147', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'livre', cemiterio: dom_bosco)
+lote2 = Lote.create(quadra:'2', terreno: '732', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'concedido', concessionario: concessionario_joao, cemiterio: dom_bosco)
+lote3 = Lote.create(quadra:'3', terreno: '19', gleba: '1', rua: '7', largura: 160, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'concedido', concessionario: concessionario_maria, cemiterio: dom_bosco)
+lote4 = Lote.create(quadra:'8', terreno: '195', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'Capela', estado: 'livre', cemiterio: dom_bosco)
 
 
 #CADASTRO DE PROCESSO GERAL
