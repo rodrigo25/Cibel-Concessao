@@ -4,9 +4,15 @@ class CadastrosController < ApplicationController
   end
 
   def renovacao
+    @lote = Lote.new
   end
   
   def renovacao_form
-    debugger
+  end
+  
+  def ajax_renovacao_lote
+    respond_to do |format|
+      format.js { render :file => "/cadastros/partials/renovacao/ajax_renovacao_lote.js" }
+    end
   end
 end
