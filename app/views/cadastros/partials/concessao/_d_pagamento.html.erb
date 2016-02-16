@@ -1,48 +1,29 @@
   <div class="box box-solid">
     <div class="box-header with-border">
-      <h3 class="box-title">Dados Pessoais</h3>
+      <h3 class="box-title">Valores</h3>
     </div><!-- /.box-header -->
 		
 		<!-- form start -->
     <form class="form-horizontal">
       
       <div class="box-body">
-        <div id="table-wrapper">
-          <div id="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th><span class="text">Quadra</span></th>
-                  <th><span class="text">Terreno</span></th>
-                  <th><span class="text">Gleba</span></th>
-                  <th><span class="text">Rua</span></th>
-                  <th><span class="text">Avenida</span></th>
-                  <th><span class="text">Concessionário</span></th>
-                  <th><span class="text">Estado</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr> <td>1</td> <td>2</td> <td>55X</td> <td>48</td> <td>32</td> <td>Joaquim da Silva Ferreira</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>21</td> <td>5</td> <td>38</td> <td>2</td> <td>John Henry Bonham</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>33</td> <td>12</td> <td></td> <td>5</td> <td>Robert Allen Zimmerman</td> <td>Concedido</td> </tr>
-                <tr> <td>1</td> <td>9</td> <td>3</td> <td></td> <td>77</td> <td>Agenor de Miranda Araújo Neto</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>5</td> <td></td> <td></td> <td></td> <td>Amy Jade Winehouse</td> <td>Concedido</td> </tr>
-                <tr> <td>1</td> <td>23</td> <td>54Y</td> <td>21</td> <td></td> <td>Renato Manfredini Júnior </td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>8</td> <td>4X</td> <td>8</td> <td>32</td> <td>Steven Patrick Morrissey</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>25</td> <td>77</td> <td></td> <td></td> <td>Ian Kevin Curtis</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>4</td> <td>4Y</td> <td></td> <td>3</td> <td>James Douglas Morrison</td> <td>Concedido</td> </tr>
-                <tr> <td>1</td> <td>2</td> <td>5X</td> <td>62</td> <td>44</td> <td>Christa Päffgen</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>12</td> <td>6</td> <td></td> <td></td> <td>David Robert Jones</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>42</td> <td>5</td> <td>38</td> <td></td> <td>James Newell Osterberg</td> <td>Concedido</td> </tr>
-                <tr> <td>1</td> <td>32</td> <td></td> <td>5</td> <td></td> <td>John Winston Ono Lennon</td> <td>Concedido</td> </tr>
-                <tr> <td>1</td> <td>32</td> <td>23</td> <td>16</td> <td>6</td> <td>Lewis Bryan Hopkin Jones</td> <td>Livre</td> </tr>
-                <tr> <td>1</td> <td>2</td> <td>5Z</td> <td>38</td> <td></td> <td>John Simon Ritchie-Beverly</td> <td>Livre</td> </tr>
-              </tbody>
-            </table>
-          </div>
+        <div>
+          <table class="tabela-precos" id="rowclick">
+            <thead>
+              <tr class="tabela-precos-tr">
+                <th width="90%"><span class="text">Itens</span></th>
+                <th width="10%"><span class="text">Valor</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="disabled-row"> <td><input type="checkbox" disabled> Lote - 1,60x2,30 (3,68m²)</td> <td>R$ 5.113,36</td> </tr>
+              <tr class="disabled-row"> <td><input type="checkbox" disabled> 2 Gavetas</td> <td>R$ 1.768,88</td> </tr>
+              <tr> <td><input type="checkbox"> Taxa da Expediente</td> <td>R$ 15,50</td> </tr>
+              <tr> <td><input type="checkbox"> Carta de Concessão</td> <td>R$ 22,35</td> </tr>
+            </tbody>
+          </table>
         </div>
   			
-  		
   		</div><!-- /.box-body -->
 									
 	  </form>
@@ -53,55 +34,88 @@
   
   <div class="box box-solid">
     <div class="box-header with-border">
-      <h3 class="box-title">Informações Adicionais</h3>
+      <h3 class="box-title">Informações</h3>
     </div><!-- /.box-header -->
 		
 		<!-- form start -->
     <form class="form-horizontal">
       
       <div class="box-body">
+        
         <div class="form-group row">
-          <div class="col-sm-5">
-            <label for="concessao-lote-largura" class="col-sm-3 control-label">Largura:</label>
-            <div class="col-sm-3">
-              <input type="text" class="form-control" id="concessao-lote-largura">
-            </div>
-            
-            <label for="concessao-lote-comprimento" class="col-sm-3 control-label">Comprimento:</label>
-            <div class="col-sm-3">
-              <input type="text" class="form-control" id="concessao-lote-comprimento">
-            </div>
+          <div class="col-sm-5 checkbox">
+            <label>
+              <input type="checkbox"> Emitente é o Requerente?
+            </label>
           </div>
-          <div class="col-sm-5">
-            <label for="concessao-lote-gleba" class="col-sm-4 control-label">Tipo Construção:</label>
-            <div class="col-sm-6">
-              <select class="form-control">
-            	  <option>Capela</option>
-            	  <option>Carneiro</option>
-            	  <option>Columbário</option>
-            	  <option>Gaveta</option>
-              </select>
-  				  </div>
+        </div>
+        
+        <div class="form-group row">
+          <label for="concessao-pagamento-emitente" class="col-sm-1 control-label">Emitente:</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="concessao-pagamento-emitente">
           </div>
+        </div>
+        
+        <div class="form-group row">    
+          <label for="concessao-requerente-rua" class="col-sm-1 control-label">Rua:</label>
+  	      <div class="col-sm-3">
+    	      <input type="text" class="form-control" id="concessao-requerente-rua">
+					</div>
+										
+					<label for="concessao-requerente-numero" class="col-sm-1 control-label">Numero:&nbsp&nbsp</label>
+          <div class="col-sm-1">
+            <input type="text" class="form-control" id="concessao-requerente-numero">
+					</div>
+										
+					<label for="concessao-requerente-compl" class="col-sm-offset-1 col-sm-1 control-label">Compl.:</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="concessao-requerente-compl">
+					</div>
+
         </div>
   			    
   			    
-  			    
+  		  <div class="form-group row">
+          <label for="concessao-pagamento-rg" class="col-sm-1 control-label">RG:</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="concessao-pagamento-rg">
+          </div>
+            
+          <label for="concessao-pagamento-cpf" class="col-sm-offset-1 col-sm-1 control-label">CPF:</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="concessao-pagamento-endereco">
+          </div>
+          
+          <label for="concessao-pagamento-tel" class="col-sm-1 control-label">Tel.:</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="concessao-pagamento-tel">
+          </div>
+        </div>
         
         
-  			<div class="form-group row">
-          <div class="col-sm-5">
-  				  <label for="concessao-lote-rua" class="col-sm-3 control-label">Qtd. Gavetas:</label>
-    	      <div class="col-sm-3">
-      	      <input type="text" class="form-control" id="concessao-lote-rua">
-  				  </div>
-  				
-  				  <label for="concessao-lote-av" class="col-sm-3 control-label">Qtd. Ossário:</label>
-    	      <div class="col-sm-3">
-      	      <input type="text" class="form-control" id="concessao-lote-av">
-  				  </div>
-  			  </div>
-  			 </div>
+        
+        <div class="form-group row">
+
+          <label for="concessao-pagamento-parcelas" class="col-sm-1 control-label">Parcelas:</label>
+          <div class="col-sm-1">
+            <select class="form-control">
+          	  <option>1</option>
+          	  <option>2</option>
+          	  <option>3</option>
+          	  <option>4</option>
+          	  <option>5</option>
+          	  <option>6</option>
+            </select>
+  				</div>
+            
+          <label for="concessao-pagamento-valor" class="col-sm-offset-2 col-sm-1 control-label">Valor:</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="concessao-pagamento-valor">
+          </div>
+          
+        </div>
+        
       </div>
     </form>
   </div>
