@@ -38,26 +38,31 @@
           <div class="col-sm-1">
             <input type="text" class="form-control" id="concessao-lote-terreno">
   				</div>
-  										
-          <label for="concessao-lote-gleba" class="col-sm-1 control-label">Gleba:</label>
+  				
+  				<label for="concessao-lote-gleba" class="col-sm-1 control-label">Gleba:</label>
     	    <div class="col-sm-1">
       	    <input type="text" class="form-control" id="concessao-lote-gleba">
   				</div>
   				
-  				<label for="concessao-lote-rua" class="col-sm-1 control-label">Rua:</label>
-    	    <div class="col-sm-1">
-      	    <input type="text" class="form-control" id="concessao-lote-rua">
-  				</div>
+  				<div class="col-sm-6">
   				
-  				<label for="concessao-lote-av" class="col-sm-1 control-label">Av.:</label>
-    	    <div class="col-sm-1">
-      	    <input type="text" class="form-control" id="concessao-lote-av">
-  				</div>
-  				
-  				<div class="col-sm-2">
-  				  <div class="col-sm-offset-3 col-sm-10">
-  				    <button class="btn btn-block btn-warning"><i class="fa fa-search"></i>Buscar</button>
+  				  <label for="concessao-lote-rua" class="col-sm-1 control-label">Rua:</label>
+    	      <div class="col-sm-2">
+      	      <input type="text" class="form-control" id="concessao-lote-rua">
   				  </div>
+  				
+  				  <label for="concessao-lote-av" class="col-sm-1 control-label">Av.:</label>
+    	      <div class="col-sm-2">
+      	      <input type="text" class="form-control" id="concessao-lote-av">
+  				  </div>
+  				
+  				  <div class="col-sm-3">
+    			    <button class="btn btn-block btn-success"><i class="fa fa-pencil"></i>Novo</button>
+            </div>
+    			    
+    			  <div class="col-sm-3">
+  		  	    <button class="btn btn-block btn-warning"><i class="fa fa-search"></i>Buscar</button>
+  			    </div>
   				</div>
   			</div>
   			
@@ -65,7 +70,7 @@
   			 	<div id="table-wrapper">
             <div id="table-scroll">
               <table>
-                <thead>
+                <thead id="thead-teste">
                   <tr>
                     <th><span class="text">Quadra</span></th>
                     <th><span class="text">Terreno</span></th>
@@ -76,7 +81,7 @@
                     <th><span class="text">Estado</span></th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody-corpo">
                   <tr> <td>1</td> <td>2</td> <td>55X</td> <td>48</td> <td>32</td> <td>Joaquim da Silva Ferreira</td> <td>Livre</td> </tr>
                   <tr> <td>1</td> <td>21</td> <td>5</td> <td>38</td> <td>2</td> <td>John Henry Bonham</td> <td>Livre</td> </tr>
                   <tr> <td>1</td> <td>33</td> <td>12</td> <td></td> <td>5</td> <td>Robert Allen Zimmerman</td> <td>Concedido</td> </tr>
@@ -123,18 +128,18 @@
           <div class="col-sm-5">
             <label for="concessao-lote-largura" class="col-sm-3 control-label">Largura:</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" id="concessao-lote-largura">
+              <input type="text" class="form-control" id="concessao-lote-largura" disabled>
             </div>
             
             <label for="concessao-lote-comprimento" class="col-sm-3 control-label">Comprimento:</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" id="concessao-lote-comprimento">
+              <input type="text" class="form-control" id="concessao-lote-comprimento" disabled>
             </div>
           </div>
           <div class="col-sm-5">
             <label for="concessao-lote-gleba" class="col-sm-4 control-label">Tipo Construção:</label>
             <div class="col-sm-6">
-              <select class="form-control">
+              <select class="form-control" disabled>
             	  <option>Capela</option>
             	  <option>Carneiro</option>
             	  <option>Columbário</option>
@@ -152,12 +157,12 @@
           <div class="col-sm-5">
   				  <label for="concessao-lote-rua" class="col-sm-3 control-label">Qtd. Gavetas:</label>
     	      <div class="col-sm-3">
-      	      <input type="text" class="form-control" id="concessao-lote-rua">
+      	      <input type="text" class="form-control" id="concessao-lote-rua" disabled>
   				  </div>
   				
   				  <label for="concessao-lote-av" class="col-sm-3 control-label">Qtd. Ossário:</label>
     	      <div class="col-sm-3">
-      	      <input type="text" class="form-control" id="concessao-lote-av">
+      	      <input type="text" class="form-control" id="concessao-lote-av" disabled>
   				  </div>
   			  </div>
   			 </div>

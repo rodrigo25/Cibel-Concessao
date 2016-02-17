@@ -12,4 +12,11 @@ $(document).ready(function() {
     }
   });
 });
-  
+
+$(document).ready(function() {
+	document.getElementById("dcalc").disabled = true;
+});
+
+function CheckTextbox() {
+  document.getElementById("dcalc").disabled = true;
+}
