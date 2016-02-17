@@ -13,6 +13,10 @@
       </div>
 	  </div>
 	</div>
+	<ul class="pager wizard">
+		<li class="previous"><a href="#">Anterior</a></li>
+		<li class="next"><a href="#">Próximo</a></li>
+	</ul>
 	<%= form_tag renovacao_form_path do %>
 		<div class="tab-content">
 		  <div class="tab-pane" id="tab1">
@@ -33,10 +37,7 @@
 			<div class="tab-pane" id="tab6">
 		    <%= render 'cadastros/partials/renovacao/f_emissao_de_guias' %>
 			</div>
-			<ul class="pager wizard">
-				<li class="previous"><a href="#">Anterior</a></li>
-				<li class="next"><a href="#">Próximo</a></li>
-			</ul>
+			<div style="margin-bottom: 50px"></div><!--margem pro footer nao cobrir o formulario-->
 		</div>
 	<% end %>
 </div>

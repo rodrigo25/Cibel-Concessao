@@ -78,3 +78,10 @@ th, td {
   color: #A0A0A0;
   cursor: not-allowed;
 }
+
+.highlight {
+  background-color: yellow;
+  &:hover {
+    background-color: yellow;
+  }
+}
