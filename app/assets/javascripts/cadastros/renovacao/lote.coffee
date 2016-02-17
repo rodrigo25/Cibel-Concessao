@@ -30,12 +30,15 @@ jQuery ->
     $('#lote_tipo_construcao').val($(this).attr("data-tipo_construcao")).prop("disabled", true)
     $('#lote_qtd_gaveta').val($(this).attr("data-qtd_gaveta")).prop("disabled", true)
     $('#lote_qtd_ossario').val($(this).attr("data-qtd_ossario")).prop("disabled", true)
-    $('#lote_cemiterio_id').val($(this).attr("data-cemiterio"))prop("disabled", true)
+    $('#lote_cemiterio_id').prop("disabled", true)
     $('#lote_quadra').val($(this).find('td.quadra').text()).prop("disabled", true)
     $('#lote_terreno').val($(this).find('td.terreno').text()).prop("disabled", true)
     $('#lote_gleba').val($(this).find('td.gleba').text()).prop("disabled", true)
     $('#lote_rua').val($(this).find('td.rua').text()).prop("disabled", true)
     $('#lote_avenida').val($(this).find('td.avenida').text()).prop("disabled", true)
+    
+  $('#lote_cemiterio_id').change ->
+    $('#corpo_tabela').html("")
     
   $("#ajax_renovacao_lote_criar_novo_lote").click ->
     $('#lote_cemiterio_id').prop("disabled", false)
@@ -51,43 +54,43 @@ jQuery ->
     $('#lote_qtd_gaveta').val("").prop("disabled", false)
     $('#lote_qtd_ossario').val("").prop("disabled", false)
   
-  # $('#ajax_renovacao_lote_limpar').click ->
-  #   $('#lote_cemiterio_id').val("").prop("disabled", false)
-  #   $('#lote_quadra').val("").prop("disabled", false)
-  #   $('#lote_terreno').val("").prop("disabled", false)
-  #   $('#lote_gleba').val("").prop("disabled", false)
-  #   $('#lote_rua').val("").prop("disabled", false)
-  #   $('#lote_avenida').val("").prop("disabled", false)
-  #   $('#corpo_tabela').html("")
-  #   $('#lote_largura').val("").prop("disabled", false)
-  #   $('#lote_comprimento').val("").prop("disabled", false)
-  #   $('#lote_tipo_construcao').val("").prop("disabled", false)
-  #   $('#lote_qtd_gaveta').val("").prop("disabled", false)
-  #   $('#lote_qtd_ossario').val("").prop("disabled", false)
+  $('#ajax_renovacao_lote_limpar').click ->
+    $('#lote_cemiterio_id').val("").prop("disabled", false)
+    $('#lote_quadra').val("").prop("disabled", false)
+    $('#lote_terreno').val("").prop("disabled", false)
+    $('#lote_gleba').val("").prop("disabled", false)
+    $('#lote_rua').val("").prop("disabled", false)
+    $('#lote_avenida').val("").prop("disabled", false)
+    $('#corpo_tabela').html("")
+    $('#lote_largura').val("").prop("disabled", false)
+    $('#lote_comprimento').val("").prop("disabled", false)
+    $('#lote_tipo_construcao').val("").prop("disabled", false)
+    $('#lote_qtd_gaveta').val("").prop("disabled", false)
+    $('#lote_qtd_ossario').val("").prop("disabled", false)
   
-  $('#concessionario').change ->
+  $('#concessionario_checkbox').change ->
     # $(this).prop('checked')
     # quando eu do check, ele retorna true
     if $(this).prop('checked')
-      $('#concessionario_municipe_nome').val($('#municipe_nome').val()).prop("disabled", true)
-      $('#concessionario_municipe_RG').val($('#municipe_RG').val()).prop("disabled", true)
-      $('#concessionario_requerente_CPF').val($('#requerente_CPF').val()).prop("disabled", true)
+      $('#concessionario_municipe_nome').val($('#municipe_nome').val()).prop("disabled", true) if $('#municipe_nome').val().trim().length != 0
+      $('#concessionario_municipe_RG').val($('#municipe_RG').val()).prop("disabled", true) if $('#municipe_RG').val().trim().length != 0
+      $('#concessionario_requerente_CPF').val($('#requerente_CPF').val()).prop("disabled", true) if $('#requerente_CPF').val().trim().length != 0
       $('#concessionario_requerente_dt_nascimento_day').val($('#requerente_dt_nascimento_day').val()).prop("disabled", true)
       $('#concessionario_requerente_dt_nascimento_month').val($('#requerente_dt_nascimento_month').val()).prop("disabled", true)
       $('#concessionario_requerente_dt_nascimento_year').val($('#requerente_dt_nascimento_year').val()).prop("disabled", true)
-      $('#concessionario_requerente_estado_civil').val($('#requerente_estado_civil').val()).prop("disabled", true)
-      $('#concessionario_requerente_nacionalidade').val($('#requerente_nacionalidade').val()).prop("disabled", true)
-      $('#concessionario_requerente_profissao').val($('#requerente_profissao').val()).prop("disabled", true)
-      $('#concessionario_requerente_email').val($('#requerente_email').val()).prop("disabled", true)
-      $('#concessionario_municipe_telefone').val($('#municipe_telefone').val()).prop("disabled", true)
-      $('#concessionario_requerente_celular').val($('#requerente_celular').val()).prop("disabled", true)
-      $('#concessionario_requerente_CEP').val($('#requerente_CEP').val()).prop("disabled", true)
-      $('#concessionario_municipe_rua').val($('#municipe_rua').val()).prop("disabled", true)
-      $('#concessionario_municipe_numero').val($('#municipe_numero').val()).prop("disabled", true)
-      $('#concessionario_municipe_complemento').val($('#municipe_complemento').val()).prop("disabled", true)
-      $('#concessionario_requerente_bairro').val($('#requerente_bairro').val()).prop("disabled", true)
-      $('#concessionario_requerente_cidade').val($('#requerente_cidade').val()).prop("disabled", true)
-      $('#concessionario_requerente_estado').val($('#requerente_estado').val()).prop("disabled", true)
+      $('#concessionario_requerente_estado_civil').val($('#requerente_estado_civil').val()).prop("disabled", true) if $('#requerente_estado_civil').val().trim().length != 0
+      $('#concessionario_requerente_nacionalidade').val($('#requerente_nacionalidade').val()).prop("disabled", true) if $('#requerente_nacionalidade').val().trim().length != 0
+      $('#concessionario_requerente_profissao').val($('#requerente_profissao').val()).prop("disabled", true) if $('#requerente_profissao').val().trim().length != 0
+      $('#concessionario_requerente_email').val($('#requerente_email').val()).prop("disabled", true) if $('#requerente_email').val().trim().length != 0
+      $('#concessionario_municipe_telefone').val($('#municipe_telefone').val()).prop("disabled", true) if $('#municipe_telefone').val().trim().length != 0
+      $('#concessionario_requerente_celular').val($('#requerente_celular').val()).prop("disabled", true) if $('#requerente_celular').val().trim().length != 0
+      $('#concessionario_requerente_CEP').val($('#requerente_CEP').val()).prop("disabled", true) if $('#requerente_CEP').val().trim().length != 0
+      $('#concessionario_municipe_rua').val($('#municipe_rua').val()).prop("disabled", true) if $('#municipe_rua').val().trim().length != 0
+      $('#concessionario_municipe_numero').val($('#municipe_numero').val()).prop("disabled", true) if $('#municipe_numero').val().trim().length != 0
+      $('#concessionario_municipe_complemento').val($('#municipe_complemento').val()).prop("disabled", true) if $('#municipe_complemento').val().trim().length != 0
+      $('#concessionario_requerente_bairro').val($('#requerente_bairro').val()).prop("disabled", true) if $('#requerente_bairro').val().trim().length != 0
+      $('#concessionario_requerente_cidade').val($('#requerente_cidade').val()).prop("disabled", true) if $('#requerente_cidade').val().trim().length != 0
+      $('#concessionario_requerente_estado').val($('#requerente_estado').val()).prop("disabled", true) if $('#requerente_estado').val().trim().length != 0
     else
       $('#concessionario_municipe_nome').val("").prop("disabled", false)
       $('#concessionario_municipe_RG').val("").prop("disabled", false)
@@ -95,7 +98,7 @@ jQuery ->
       $('#concessionario_requerente_dt_nascimento_day').val("1").prop("disabled", false)
       $('#concessionario_requerente_dt_nascimento_month').val("1").prop("disabled", false)
       $('#concessionario_requerente_dt_nascimento_year').val("1900").prop("disabled", false)
-      $('#concessionario_requerente_estado_civil').val("Solteiro(a)").prop("disabled", false)
+      $('#concessionario_requerente_estado_civil').val("").prop("disabled", false)
       $('#concessionario_requerente_nacionalidade').val("").prop("disabled", false)
       $('#concessionario_requerente_profissao').val("").prop("disabled", false)
       $('#concessionario_requerente_email').val("").prop("disabled", false)
@@ -107,4 +110,8 @@ jQuery ->
       $('#concessionario_municipe_complemento').val("").prop("disabled", false)
       $('#concessionario_requerente_bairro').val("").prop("disabled", false)
       $('#concessionario_requerente_cidade').val("").prop("disabled", false)
-      $('#concessionario_requerente_estado').val("AC").prop("disabled", false)
+      $('#concessionario_requerente_estado').val("").prop("disabled", false)
+      
+      
+  $('#municipe_nome').keyup ->
+    $('#concessionario_checkbox').click() if $('#concessionario_checkbox').prop("checked", true)
