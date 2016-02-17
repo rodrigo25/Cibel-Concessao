@@ -11,7 +11,7 @@ class CadastrosController < ApplicationController
   end
   
   def ajax_renovacao_lote
-    params[:cemiterio_id] = '%' if params[:cemiterio_id].blank?
+    params[:cemiterio_id] = nil if params[:cemiterio_id].blank?
     params[:quadra] = '%' if params[:quadra].blank?
     params[:terreno] = '%' if params[:terreno].blank?
     params[:gleba] = '%' if params[:gleba].blank?
