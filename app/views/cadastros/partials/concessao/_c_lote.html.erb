@@ -12,7 +12,7 @@
   			
   			
   			<div class="form-group row">
-  			  <label for="concessao-lote-quadra" class="col-sm-1 control-label">Cemitério:</label>
+  			  <label class="col-sm-1 control-label">Cemitério:</label>
   			  
           <div class="col-xs-3">
             <select class="form-control">
@@ -29,7 +29,7 @@
   			
   			
   			<div class="form-group row">
-    	    <label for="concessao-lote-quadra" class="col-sm-1 control-label">Quadra:</label>
+          <label for="concessao-lote-quadra" class="col-sm-1 control-label">Quadra:</label>
       	  <div class="col-sm-1">
         	  <input type="text" class="form-control" id="concessao-lote-quadra">
   				</div>
@@ -45,7 +45,6 @@
   				</div>
   				
   				<div class="col-sm-6">
-  				
   				  <label for="concessao-lote-rua" class="col-sm-1 control-label">Rua:</label>
     	      <div class="col-sm-2">
       	      <input type="text" class="form-control" id="concessao-lote-rua">
@@ -56,51 +55,55 @@
       	      <input type="text" class="form-control" id="concessao-lote-av">
   				  </div>
   				
-  				  <div class="col-sm-3">
-    			    <button class="btn btn-block btn-success"><i class="fa fa-pencil"></i>Novo</button>
+  				  <div class="col-sm-2">
+    			    <button class="btn btn-block btn-success"><i class="fa fa-pencil"></i></button>
             </div>
     			    
-    			  <div class="col-sm-3">
-  		  	    <button class="btn btn-block btn-warning"><i class="fa fa-search"></i>Buscar</button>
+    			  <div class="col-sm-2">
+  		  	    <button class="btn btn-block btn-warning"><i class="fa fa-search"></i></button>
+  			    </div>
+  			    
+  			    <div class="col-sm-2">
+  		  	    <button class="btn btn-block btn-default"><i class="fa fa-refresh"></i></button>
   			    </div>
   				</div>
   			</div>
   			
   			
-  			 	<div id="table-wrapper">
-            <div id="table-scroll">
-              <table>
-                <thead id="thead-teste">
-                  <tr>
-                    <th><span class="text">Quadra</span></th>
-                    <th><span class="text">Terreno</span></th>
-                    <th><span class="text">Gleba</span></th>
-                    <th><span class="text">Rua</span></th>
-                    <th><span class="text">Avenida</span></th>
-                    <th><span class="text">Concessionário</span></th>
-                    <th><span class="text">Estado</span></th>
-                  </tr>
-                </thead>
-                <tbody id="tbody-corpo">
-                  <tr> <td>1</td> <td>2</td> <td>55X</td> <td>48</td> <td>32</td> <td>Joaquim da Silva Ferreira</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>21</td> <td>5</td> <td>38</td> <td>2</td> <td>John Henry Bonham</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>33</td> <td>12</td> <td></td> <td>5</td> <td>Robert Allen Zimmerman</td> <td>Concedido</td> </tr>
-                  <tr> <td>1</td> <td>9</td> <td>3</td> <td></td> <td>77</td> <td>Agenor de Miranda Araújo Neto</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>5</td> <td></td> <td></td> <td></td> <td>Amy Jade Winehouse</td> <td>Concedido</td> </tr>
-                  <tr> <td>1</td> <td>23</td> <td>54Y</td> <td>21</td> <td></td> <td>Renato Manfredini Júnior </td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>8</td> <td>4X</td> <td>8</td> <td>32</td> <td>Steven Patrick Morrissey</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>25</td> <td>77</td> <td></td> <td></td> <td>Ian Kevin Curtis</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>4</td> <td>4Y</td> <td></td> <td>3</td> <td>James Douglas Morrison</td> <td>Concedido</td> </tr>
-                  <tr> <td>1</td> <td>2</td> <td>5X</td> <td>62</td> <td>44</td> <td>Christa Päffgen</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>12</td> <td>6</td> <td></td> <td></td> <td>David Robert Jones</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>42</td> <td>5</td> <td>38</td> <td></td> <td>James Newell Osterberg</td> <td>Concedido</td> </tr>
-                  <tr> <td>1</td> <td>32</td> <td></td> <td>5</td> <td></td> <td>John Winston Ono Lennon</td> <td>Concedido</td> </tr>
-                  <tr> <td>1</td> <td>32</td> <td>23</td> <td>16</td> <td>6</td> <td>Lewis Bryan Hopkin Jones</td> <td>Livre</td> </tr>
-                  <tr> <td>1</td> <td>2</td> <td>5Z</td> <td>38</td> <td></td> <td>John Simon Ritchie-Beverly</td> <td>Livre</td> </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+      			 	<div id="table-wrapper">
+                <div id="table-scroll">
+                  <table>
+                    <thead id="thead-teste">
+                      <tr>
+                        <th><span class="text">Quadra</span></th>
+                        <th><span class="text">Terreno</span></th>
+                        <th><span class="text">Gleba</span></th>
+                        <th><span class="text">Rua</span></th>
+                        <th><span class="text">Avenida</span></th>
+                        <th><span class="text">Concessionário</span></th>
+                        <th><span class="text">Estado</span></th>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody-corpo">
+                      <tr> <td>1</td> <td>2</td> <td>55X</td> <td>48</td> <td>32</td> <td>Joaquim da Silva Ferreira</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>21</td> <td>5</td> <td>38</td> <td>2</td> <td>John Henry Bonham</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>33</td> <td>12</td> <td></td> <td>5</td> <td>Robert Allen Zimmerman</td> <td>Concedido</td> </tr>
+                      <tr> <td>1</td> <td>9</td> <td>3</td> <td></td> <td>77</td> <td>Agenor de Miranda Araújo Neto</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>5</td> <td></td> <td></td> <td></td> <td>Amy Jade Winehouse</td> <td>Concedido</td> </tr>
+                      <tr> <td>1</td> <td>23</td> <td>54Y</td> <td>21</td> <td></td> <td>Renato Manfredini Júnior </td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>8</td> <td>4X</td> <td>8</td> <td>32</td> <td>Steven Patrick Morrissey</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>25</td> <td>77</td> <td></td> <td></td> <td>Ian Kevin Curtis</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>4</td> <td>4Y</td> <td></td> <td>3</td> <td>James Douglas Morrison</td> <td>Concedido</td> </tr>
+                      <tr> <td>1</td> <td>2</td> <td>5X</td> <td>62</td> <td>44</td> <td>Christa Päffgen</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>12</td> <td>6</td> <td></td> <td></td> <td>David Robert Jones</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>42</td> <td>5</td> <td>38</td> <td></td> <td>James Newell Osterberg</td> <td>Concedido</td> </tr>
+                      <tr> <td>1</td> <td>32</td> <td></td> <td>5</td> <td></td> <td>John Winston Ono Lennon</td> <td>Concedido</td> </tr>
+                      <tr> <td>1</td> <td>32</td> <td>23</td> <td>16</td> <td>6</td> <td>Lewis Bryan Hopkin Jones</td> <td>Livre</td> </tr>
+                      <tr> <td>1</td> <td>2</td> <td>5Z</td> <td>38</td> <td></td> <td>John Simon Ritchie-Beverly</td> <td>Livre</td> </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
   			
   			
   			

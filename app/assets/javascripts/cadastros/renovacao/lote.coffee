@@ -30,7 +30,7 @@ jQuery ->
     $('#lote_tipo_construcao').val($(this).attr("data-tipo_construcao")).prop("disabled", true)
     $('#lote_qtd_gaveta').val($(this).attr("data-qtd_gaveta")).prop("disabled", true)
     $('#lote_qtd_ossario').val($(this).attr("data-qtd_ossario")).prop("disabled", true)
-    $('#lote_cemiterio_id').val($(this).attr("data-cemiterio"))prop("disabled", true)
+    $('#lote_cemiterio_id').val($(this).attr("data-cemiterio")).prop("disabled", true)
     $('#lote_quadra').val($(this).find('td.quadra').text()).prop("disabled", true)
     $('#lote_terreno').val($(this).find('td.terreno').text()).prop("disabled", true)
     $('#lote_gleba').val($(this).find('td.gleba').text()).prop("disabled", true)
