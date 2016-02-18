@@ -1,3 +1,4 @@
 jQuery ->
-  $('#rowclick tr').click ->
-    $(this).find(':checkbox').click()
+  $('#rowclick tr').click (event) ->
+    if (event.target.type != 'checkbox')
+      $(this).find(':checkbox').click()
