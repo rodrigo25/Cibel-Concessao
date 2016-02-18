@@ -1,4 +1,10 @@
 jQuery ->
+  $('#lote_largura').prop("disabled", true)
+  $('#lote_comprimento').prop("disabled", true)
+  $('#lote_tipo_construcao').prop("disabled", true)
+  $('#lote_qtd_gaveta').prop("disabled", true)
+  $('#lote_qtd_ossario').prop("disabled", true)
+  
   $("#ajax_renovacao_lote_buscar").click ->
     $('#lote_largura').val("")
     $('#lote_comprimento').val("")
@@ -62,11 +68,11 @@ jQuery ->
     $('#lote_rua').val("").prop("disabled", false)
     $('#lote_avenida').val("").prop("disabled", false)
     $('#corpo_tabela').html("")
-    $('#lote_largura').val("").prop("disabled", false)
-    $('#lote_comprimento').val("").prop("disabled", false)
-    $('#lote_tipo_construcao').val("").prop("disabled", false)
-    $('#lote_qtd_gaveta').val("").prop("disabled", false)
-    $('#lote_qtd_ossario').val("").prop("disabled", false)
+    $('#lote_largura').val("").prop("disabled", true)
+    $('#lote_comprimento').val("").prop("disabled", true)
+    $('#lote_tipo_construcao').val("").prop("disabled", true)
+    $('#lote_qtd_gaveta').val("").prop("disabled", true)
+    $('#lote_qtd_ossario').val("").prop("disabled", true)
   
   $('#concessionario_checkbox').change ->
     # $(this).prop('checked')
