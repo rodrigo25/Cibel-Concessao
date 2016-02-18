@@ -4,19 +4,3 @@ $(document).ready(function() {
 		return false;
 	}});
 });
-
-$(document).ready(function() {
-  $('#rowclick tr').click(function(event) {
-    if (event.target.type !== 'checkbox') {
-      $(':checkbox', this).trigger('click');
-    }
-  });
-});
-
-$(document).ready(function() {
-	document.getElementById("dcalc").disabled = true;
-});
-
-function CheckTextbox() {
-  document.getElementById("dcalc").disabled = true;
-}

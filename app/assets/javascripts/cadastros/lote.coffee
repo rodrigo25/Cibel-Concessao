@@ -75,9 +75,7 @@ jQuery ->
       $('#concessionario_municipe_nome').val($('#municipe_nome').val()).prop("disabled", true) if $('#municipe_nome').val().trim().length != 0
       $('#concessionario_municipe_RG').val($('#municipe_RG').val()).prop("disabled", true) if $('#municipe_RG').val().trim().length != 0
       $('#concessionario_requerente_CPF').val($('#requerente_CPF').val()).prop("disabled", true) if $('#requerente_CPF').val().trim().length != 0
-      $('#concessionario_requerente_dt_nascimento_day').val($('#requerente_dt_nascimento_day').val()).prop("disabled", true)
-      $('#concessionario_requerente_dt_nascimento_month').val($('#requerente_dt_nascimento_month').val()).prop("disabled", true)
-      $('#concessionario_requerente_dt_nascimento_year').val($('#requerente_dt_nascimento_year').val()).prop("disabled", true)
+      $('#concessionario_requerente_dt_nascimento').val($('#requerente_dt_nascimento').val()).prop("disabled", true) if $('#requerente_dt_nascimento').val().trim().length != 0
       $('#concessionario_requerente_estado_civil').val($('#requerente_estado_civil').val()).prop("disabled", true) if $('#requerente_estado_civil').val().trim().length != 0
       $('#concessionario_requerente_nacionalidade').val($('#requerente_nacionalidade').val()).prop("disabled", true) if $('#requerente_nacionalidade').val().trim().length != 0
       $('#concessionario_requerente_profissao').val($('#requerente_profissao').val()).prop("disabled", true) if $('#requerente_profissao').val().trim().length != 0
@@ -95,9 +93,7 @@ jQuery ->
       $('#concessionario_municipe_nome').val("").prop("disabled", false)
       $('#concessionario_municipe_RG').val("").prop("disabled", false)
       $('#concessionario_requerente_CPF').val("").prop("disabled", false)
-      $('#concessionario_requerente_dt_nascimento_day').val("1").prop("disabled", false)
-      $('#concessionario_requerente_dt_nascimento_month').val("1").prop("disabled", false)
-      $('#concessionario_requerente_dt_nascimento_year').val("1900").prop("disabled", false)
+      $('#concessionario_requerente_dt_nascimento').val("1").prop("disabled", false)
       $('#concessionario_requerente_estado_civil').val("").prop("disabled", false)
       $('#concessionario_requerente_nacionalidade').val("").prop("disabled", false)
       $('#concessionario_requerente_profissao').val("").prop("disabled", false)
@@ -111,7 +107,25 @@ jQuery ->
       $('#concessionario_requerente_bairro').val("").prop("disabled", false)
       $('#concessionario_requerente_cidade').val("").prop("disabled", false)
       $('#concessionario_requerente_estado').val("").prop("disabled", false)
+    
+  checkbox_change = (selector) ->
+    $('#'+selector).change ->
+      $('#concessionario_checkbox').click() if $('#concessionario_checkbox').prop("checked", true)
       
-      
-  $('#municipe_nome').keyup ->
-    $('#concessionario_checkbox').click() if $('#concessionario_checkbox').prop("checked", true)
+  checkbox_change("municipe_nome")
+  checkbox_change("municipe_RG")
+  checkbox_change("requerente_CPF")
+  checkbox_change("requerente_dt_nascimento")
+  checkbox_change("requerente_estado_civil")
+  checkbox_change("requerente_nacionalidade")
+  checkbox_change("requerente_profissao")
+  checkbox_change("requerente_email")
+  checkbox_change("municipe_telefone")
+  checkbox_change("requerente_celular")
+  checkbox_change("requerente_CEP")
+  checkbox_change("municipe_rua")
+  checkbox_change("municipe_numero")
+  checkbox_change("municipe_complemento")
+  checkbox_change("requerente_bairro")
+  checkbox_change("requerente_cidade")
+  checkbox_change("requerente_estado")
