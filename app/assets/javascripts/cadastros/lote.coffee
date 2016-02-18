@@ -93,7 +93,7 @@ jQuery ->
       $('#concessionario_municipe_nome').val("").prop("disabled", false)
       $('#concessionario_municipe_RG').val("").prop("disabled", false)
       $('#concessionario_requerente_CPF').val("").prop("disabled", false)
-      $('#concessionario_requerente_dt_nascimento').val("1").prop("disabled", false)
+      $('#concessionario_requerente_dt_nascimento').val("").prop("disabled", false)
       $('#concessionario_requerente_estado_civil').val("").prop("disabled", false)
       $('#concessionario_requerente_nacionalidade').val("").prop("disabled", false)
       $('#concessionario_requerente_profissao').val("").prop("disabled", false)

@@ -45,7 +45,7 @@
   										
           <label class="col-sm-offset-2 col-sm-1" style="text-align: left;">Estado Civíl:</label>
           <div class="col-xs-2">
-            <%= select_tag "concessionario_requerente[estado_civil]", options_for_select([ "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viúvo(a)", "Separado(a)", "Companheiro(a)" ]), class:"form-control" %>
+            <%= select_tag "concessionario_requerente[estado_civil]", options_for_select([ "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viúvo(a)", "Separado(a)", "Companheiro(a)" ]), :prompt => "", class:"form-control" %>
   				</div>	
         </div>
         
@@ -129,7 +129,7 @@
 										
     	    <label class="col-sm-1" style="align: right">UF:</label>
           <div class="col-sm-2">
-            <%= select_tag "concessionario_requerente[estado]" , options_for_select(estados), class:"form-control" %>
+            <%= select_tag "concessionario_requerente[estado]" , options_for_select(estados), :prompt => "", class:"form-control" %>
           </div>
 									
 				</div>					
