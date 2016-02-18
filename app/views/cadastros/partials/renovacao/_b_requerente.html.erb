@@ -17,7 +17,7 @@ Data de Nascimento
 <%= select_year(1900, start_year: 1900, end_year: Time.now.year, prefix: "requerente[dt_nascimento]") %> <br>
 
 Estado Civil
-<%= select_tag "requerente[estado_civil]", options_for_select([ "Solteiro(a)", "Casado(a)" ]) %> <br>
+<%= select_tag "requerente[estado_civil]", options_for_select([ "Solteiro(a)", "Casado(a)" ]), :prompt => "" %> <br>
 
 Nacionalidade
 <%= text_field_tag "requerente[nacionalidade]" %> <br>
@@ -59,6 +59,6 @@ Cidade
 <%= text_field_tag "requerente[cidade]" %> <br>
 
 UF
-<%= select_tag "requerente[estado]" , options_for_select(estados) %> <br>
+<%= select_tag "requerente[estado]" , options_for_select(estados), :prompt => "" %> <br>
 
 </div>
