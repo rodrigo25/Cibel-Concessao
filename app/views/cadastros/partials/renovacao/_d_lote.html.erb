@@ -1,60 +1,140 @@
-Terreno <br><br>
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">Dados Pessoais</h3>
+    </div><!-- /.box-header -->
+		
+		<!-- form start -->
+    <form class="form-horizontal">
+      
+      <div class="box-body">
 
-Cemitério
-<%= select_tag "lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }), :prompt => "" %> <br>
 
-Quadra
-<%= text_field_tag "lote[quadra]" %> <br>
+  			<div class="form-group row">
+  			  <label class="col-sm-1 control-label">Cemitério:</label>
+  			  
+          <div class="col-xs-3">
+            <%= select_tag "lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }), :prompt => "", class:"form-control" %>
+  				</div>
+  			</div>
+  			
+  			
+  			<div class="form-group row">
+    	    <label for="lote_quadra" class="col-sm-1 control-label">Quadra:</label>
+      	  <div class="col-sm-1">
+        	  <%= text_field_tag "lote[quadra]", nil, class:"form-control" %>
+  				</div>
+  											
+  				<label for="lote_terreno" class="col-sm-1 control-label">Terreno:</label>
+          <div class="col-sm-1">
+            <%= text_field_tag "lote[terreno]", nil, class:"form-control" %>
+  				</div>
+  				
+  				<label for="lote_gleba" class="col-sm-1 control-label">Gleba:</label>
+    	    <div class="col-sm-1">
+      	    <%= text_field_tag "lote[gleba]", nil, class:"form-control" %>
+  				</div>
+  				
+  				<div class="col-sm-6">
+  				
+  				  <label for="lote_rua" class="col-sm-1 control-label">Rua:</label>
+    	      <div class="col-sm-2">
+      	      <%= text_field_tag "lote[rua]", nil, class:"form-control" %>
+  				  </div>
+  				
+  				  <label for="lote_avenida" class="col-sm-1 control-label">Av.:</label>
+    	      <div class="col-sm-2">
+      	      <%= text_field_tag "lote[avenida]", nil, class:"form-control" %>
+  				  </div>
+  				
+  				  <div class="col-sm-2">
+    			    <span id="ajax_renovacao_lote_criar_novo_lote" class="btn btn-block btn-success"><i class="fa fa-pencil"></i></span>
+            </div>
+    			    
+    			  <div class="col-sm-2">
+  		  	    <span id="ajax_renovacao_lote_buscar" class="btn btn-block btn-warning"><i class="fa fa-search"></i></span>
+  			    </div>
+  			    
+  			    <div class="col-sm-2">
+  		  	    <span id="ajax_renovacao_lote_limpar" class="btn btn-block btn-default"><i class="fa fa-refresh"></i></span>
+  			    </div>
+  				</div>
+  			</div>
 
-Terreno
-<%= text_field_tag "lote[terreno]" %> <br>
+        <!--<span id="ajax_renovacao_lote_limpar" class="btn btn-warning"><i class="fa fa-search"></i>Limpar</span> <br>-->
 
-Gleba
-<%= text_field_tag "lote[gleba]" %> <br>
+        <div id="table-wrapper">
+          <div id="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th><span class="text">Quadra</span></th>
+                  <th><span class="text">Terreno</span></th>
+                  <th><span class="text">Gleba</span></th>
+                  <th><span class="text">Rua</span></th>
+                  <th><span class="text">Avenida</span></th>
+                  <th><span class="text">Concessionário</span></th>
+                  <th><span class="text">Estado</span></th>
+                </tr>
+              </thead>
+              <tbody id="corpo_tabela">
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div><!-- /.box-body -->
+									
+	  </form>
+	</div><!-- /.box -->
 
-Rua
-<%= text_field_tag "lote[rua]" %> <br>
-
-Avenida
-<%= text_field_tag "lote[avenida]" %> <br>
-
-<span id="ajax_renovacao_lote_buscar" class="btn btn-warning"><i class="fa fa-search"></i>Buscar</span> <br>
-<span id="ajax_renovacao_lote_criar_novo_lote" class="btn btn-warning"><i class="fa fa-search"></i>Criar novo lote</span> <br>
-<span id="ajax_renovacao_lote_limpar" class="btn btn-warning"><i class="fa fa-search"></i>Limpar</span> <br>
-
-<div id="table-wrapper">
-    <div id="table-scroll">
-      <table>
-        <thead>
-          <tr>
-            <th><span class="text">Quadra</span></th>
-            <th><span class="text">Terreno</span></th>
-            <th><span class="text">Gleba</span></th>
-            <th><span class="text">Rua</span></th>
-            <th><span class="text">Avenida</span></th>
-            <th><span class="text">Concessionário</span></th>
-            <th><span class="text">Estado</span></th>
-          </tr>
-        </thead>
-        <tbody id="corpo_tabela">
-        </tbody>
-      </table>
-    </div>
-</div>
-
-Informações adicionais <br><br>
-
-Largura
-<%= text_field_tag "lote[largura]" %> <br>
-
-Comprimento
-<%= text_field_tag "lote[comprimento]" %> <br>
-
-Tipo de Construção
-<%= select_tag "lote[tipo_construcao]", options_for_select([ "", "Capela", "Carneiro", "Columbário", "Gaveta" ]) %> <br>
-
-Quantidade de Gavetas
-<%= text_field_tag "lote[qtd_gaveta]" %> <br>
-
-Quantidade de Ossuários
-<%= text_field_tag "lote[qtd_ossario]" %> <br>
+  
+  
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">Informações Adicionais</h3>
+    </div><!-- /.box-header -->
+		
+		<!-- form start -->
+    <form class="form-horizontal">
+      
+      <div class="box-body">
+        <div class="form-group row">
+          <div class="col-sm-5">
+            <label for="lote_largura" class="col-sm-3 control-label">Largura:</label>
+            <div class="col-sm-3">
+              <%= text_field_tag "lote[largura]", nil, class:"form-control" %>
+            </div>
+            
+            <label for="lote_comprimento" class="col-sm-3 control-label">Comprimento:</label>
+            <div class="col-sm-3">
+              <%= text_field_tag "lote[comprimento]", nil, class:"form-control" %>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <label class="col-sm-4 control-label">Tipo Construção:</label>
+            <div class="col-sm-6">
+              <%= select_tag "lote[tipo_construcao]", options_for_select([ "", "Capela", "Carneiro", "Columbário", "Gaveta" ]), class:"form-control" %>
+  				  </div>
+          </div>
+        </div>
+  			    
+  			    
+  			    
+        
+        
+  			<div class="form-group row">
+          <div class="col-sm-5">
+  				  <label for="lote_qtd_gaveta" class="col-sm-3 control-label">Qtd. Gavetas:</label>
+    	      <div class="col-sm-3">
+      	      <%= text_field_tag "lote[qtd_gaveta]", nil, class:"form-control" %>
+  				  </div>
+  				
+  				  <label for="lote_qtd_ossario" class="col-sm-3 control-label">Qtd. Ossário:</label>
+    	      <div class="col-sm-3">
+      	      <%= text_field_tag "lote[qtd_ossario]", nil, class:"form-control" %>
+  				  </div>
+  			  </div>
+  			 </div>
+      </div>
+    </form>
+  </div>

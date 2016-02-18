@@ -1,43 +1,77 @@
-<div id="rootwizard">
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul>
-      	  <li><a href="#tab1" data-toggle="tab">Processo</a></li>
-      		<li><a href="#tab2" data-toggle="tab">Requerente</a></li>
-      		<li><a href="#tab3" data-toggle="tab">Concessionário</a></li>
-      		<li><a href="#tab4" data-toggle="tab">Lote</a></li>
-      		<li><a href="#tab5" data-toggle="tab">Pagamento</a></li>
-      		<li><a href="#tab6" data-toggle="tab">Emissão de Guias</a></li>
-        </ul>
-      </div>
-	  </div>
-	</div>
-	<ul class="pager wizard">
-		<li class="previous"><a href="#">Anterior</a></li>
-		<li class="next"><a href="#">Próximo</a></li>
-	</ul>
-	<%= form_tag renovacao_form_path do %>
-		<div class="tab-content">
-		  <div class="tab-pane" id="tab1">
-		    <%= render 'cadastros/partials/renovacao/a_processo' %>
-		  </div>
-		  <div class="tab-pane" id="tab2">
-		    <%= render 'cadastros/partials/renovacao/b_requerente' %>
-		  </div>
-			<div class="tab-pane" id="tab3">
-		    <%= render 'cadastros/partials/renovacao/c_concessionario' %>
-	    </div>
-			<div class="tab-pane" id="tab4">
-		    <%= render 'cadastros/partials/renovacao/d_lote' %>
-	    </div>
-			<div class="tab-pane" id="tab5">
-		    <%= render 'cadastros/partials/renovacao/e_pagamento' %>
-			</div>
-			<div class="tab-pane" id="tab6">
-		    <%= render 'cadastros/partials/renovacao/f_emissao_de_guias' %>
-			</div>
-			<div style="margin-bottom: 50px"></div><!--margem pro footer nao cobrir o formulario-->
-		</div>
-	<% end %>
-</div>
+	<!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Renovação
+      <small>Cadastros</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+      <li class="active">Here</li>
+    </ol>
+  </section>
+
+
+  <!-- Main content -->
+  <section class="content">
+  	
+		<div id="rootwizard">
+			<div class="box box-warning">
+				<div class="box-body chat" id="chat-box">
+	
+					<!-- Tabs Steps -->
+					<div class="navbar" style="align: center">
+	  				<div class="navbar-inner">
+							<div class="container">		
+		        		<ul>
+		      	  		<li><a href="#tab1" data-toggle="tab">Processo</a></li>
+			      			<li><a href="#tab2" data-toggle="tab">Requerente</a></li>
+			      			<li><a href="#tab3" data-toggle="tab">Concessionário</a></li>
+			      			<li><a href="#tab4" data-toggle="tab">Lote</a></li>
+			      			<li><a href="#tab5" data-toggle="tab">Pagamento</a></li>
+			      			<li><a href="#tab6" data-toggle="tab">Emissão de Guias</a></li>
+			        	</ul>
+		      		</div>
+			  		</div>
+					</div>
+					
+					<ul class="pager wizard">
+						<li class="previous"><a href="#">Anterior</a></li>
+						<li class="next"><a href="#">Próximo</a></li>
+					</ul>
+					
+					<%= form_tag renovacao_form_path do %>
+					<div class="tab-content">
+				  	<div class="tab-pane min-size-div" id="tab1">
+				    	<%= render 'cadastros/partials/renovacao/a_processo' %>
+				  	</div>
+				  	<div class="tab-pane" id="tab2">
+				    	<%= render 'cadastros/partials/renovacao/b_requerente' %>
+				  	</div>
+						<div class="tab-pane" id="tab3">
+				    	<%= render 'cadastros/partials/renovacao/c_concessionario' %>
+			    	</div>
+						<div class="tab-pane" id="tab4">
+				    	<%= render 'cadastros/partials/renovacao/d_lote' %>
+			    	</div>
+						<div class="tab-pane" id="tab5">
+				    	<%= render 'cadastros/partials/renovacao/e_pagamento' %>
+						</div>
+						<div class="tab-pane" id="tab6">
+				    	<%= render 'cadastros/partials/renovacao/f_emissao_de_guias' %>
+						</div>
+						<div style="margin-bottom: 50px"></div><!--margem pro footer nao cobrir o formulario-->
+					</div>
+					<% end %>
+				</div><!-- /.box-body -->
+    
+    		<div class="box-footer">
+					<ul class="pager wizard">
+						<li class="previous"><a href="#">Previous</a></li>
+						<li class="next"><a href="#">Next</a></li>
+					</ul>
+				</div><!-- /.box-footer-->
+			</div><!-- /.box -->
+		</div><!-- /.rootwizard -->
+
+  <!-- Your Page Content Here -->
+  </section><!-- /.content -->
