@@ -23,6 +23,20 @@
             </tbody>
           </table>
         </div>
+        
+        <div class="form-group row" style="margin-top:15px">
+
+          <label class="col-sm-1 control-label">Parcelas:</label>
+          <div class="col-sm-2">
+            <%= select_tag "parcela[quantidade]", options_for_select("1".."24"), :prompt => "", class:"form-control" %>
+  				</div>
+            
+          <label for="parcela_valor" class="col-sm-1 control-label">Valor:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "parcela[valor]", "R$ 25.000,00", class:"form-control", disabled: true, :style => "text-align: center" %>
+          </div>
+          
+        </div>
   			
   		</div><!-- /.box-body -->
 									
@@ -43,92 +57,54 @@
       <div class="box-body">
         
         <div class="form-group row">
-          <div class="col-sm-5 checkbox">
-            <label>
-              <input type="checkbox"> Emitente é o Requerente?
-            </label>
+          <div class="col-sm-5">
+            <%= check_box_tag "emitente_checkbox" %> 
+            <label class="control-label label-align">Requerente é o Emitente?</label>
           </div>
         </div>
         
+        
         <div class="form-group row">
-          <label for="concessao-pagamento-emitente" class="col-sm-1 control-label">Emitente:</label>
+          <label for="emitente_municipe_nome" class="col-sm-1 control-label">Emitente:</label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="concessao-pagamento-emitente">
+            <%= text_field_tag "emitente_municipe[nome]", nil, class:"form-control" %>
           </div>
         </div>
         
         <div class="form-group row">    
-          <label for="concessao-requerente-rua" class="col-sm-1 control-label">Rua:</label>
+          <label for="emitente_municipe_rua" class="col-sm-1 control-label">Rua:</label>
   	      <div class="col-sm-3">
-    	      <input type="text" class="form-control" id="concessao-requerente-rua">
+  	        <%= text_field_tag "emitente_municipe[rua]", nil, class:"form-control" %>
 					</div>
 										
-					<label for="concessao-requerente-numero" class="col-sm-1 control-label">Numero:&nbsp&nbsp</label>
+					<label for="emitente_municipe_numero" class="col-sm-1 control-label">Numero:&nbsp&nbsp</label>
           <div class="col-sm-1">
-            <input type="text" class="form-control" id="concessao-requerente-numero">
+            <%= text_field_tag "emitente_municipe[numero]", nil, class:"form-control" %>
 					</div>
 										
-					<label for="concessao-requerente-compl" class="col-sm-offset-1 col-sm-1 control-label">Compl.:</label>
+					<label for="emitente_municipe_complemento" class="col-sm-offset-1 col-sm-1 control-label">Compl.:</label>
           <div class="col-sm-2">
-            <input type="text" class="form-control" id="concessao-requerente-compl">
+            <%= text_field_tag "emitente_municipe[complemento]", nil, class:"form-control" %>
 					</div>
 
         </div>
   			    
   			    
   		  <div class="form-group row">
-          <label for="concessao-pagamento-rg" class="col-sm-1 control-label">RG:</label>
+          <label for="emitente_municipe_RG" class="col-sm-1 control-label">RG:</label>
           <div class="col-sm-2">
-            <input type="text" class="form-control" id="concessao-pagamento-rg">
-          </div>
-            
-          <label for="concessao-pagamento-cpf" class="col-sm-offset-1 col-sm-1 control-label">CPF:</label>
-          <div class="col-sm-2">
-            <input type="text" class="form-control" id="concessao-pagamento-endereco">
+            <%= text_field_tag "emitente_municipe[RG]", nil, class:"form-control" %>
           </div>
           
-          <label for="concessao-pagamento-tel" class="col-sm-1 control-label">Tel.:</label>
+          <label for="emitente_municipe_telefone" class="col-sm-offset-1 col-sm-1 control-label">Tel.:</label>
           <div class="col-sm-2">
-            <input type="text" class="form-control" id="concessao-pagamento-tel">
+            <%= text_field_tag "emitente_municipe[telefone]", nil, class:"form-control" %>
           </div>
         </div>
         
         
         
-        <div class="form-group row">
-
-          <label for="concessao-pagamento-parcelas" class="col-sm-1 control-label">Parcelas:</label>
-          <div class="col-sm-1">
-            <select class="form-control">
-          	  <option>1</option>
-          	  <option>2</option>
-          	  <option>3</option>
-          	  <option>4</option>
-          	  <option>5</option>
-          	  <option>6</option>
-          	  <option>7</option>
-          	  <option>8</option>
-          	  <option>9</option>
-          	  <option>10</option>
-          	  <option>11</option>
-          	  <option>12</option>
-          	  <option>13</option>
-          	  <option>14</option>
-          	  <option>15</option>
-          	  <option>16</option>
-          	  <option>17</option>
-          	  <option>18</option>
-          	  <option>19</option>
-          	  <option>20</option>
-            </select>
-  				</div>
-            
-          <label for="concessao-pagamento-valor" class="col-sm-offset-2 col-sm-1 control-label">Valor:</label>
-          <div class="col-sm-2">
-            <input type="text" class="form-control" id="concessao-pagamento-valor">
-          </div>
-          
-        </div>
+        
         
       </div>
     </form>
