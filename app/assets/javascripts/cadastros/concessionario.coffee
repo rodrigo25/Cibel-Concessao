@@ -1,3 +1,4 @@
+jQuery ->
  $('#concessionario_checkbox').change ->
     # $(this).prop('checked')
     # quando eu do check, ele retorna true
@@ -19,6 +20,7 @@
       $('#concessionario_requerente_bairro').val($('#requerente_bairro').val()).prop("disabled", true)
       $('#concessionario_requerente_cidade').val($('#requerente_cidade').val()).prop("disabled", true)
       $('#concessionario_requerente_estado').val($('#requerente_estado').val()).prop("disabled", true)
+      $('#ajax_concessionario_buscar').prop("disabled", true)
     else
       $('#concessionario_municipe_nome').val("").prop("disabled", false)
       $('#concessionario_municipe_RG').val("").prop("disabled", false)
@@ -37,6 +39,7 @@
       $('#concessionario_requerente_bairro').val("").prop("disabled", false)
       $('#concessionario_requerente_cidade').val("").prop("disabled", false)
       $('#concessionario_requerente_estado').val("").prop("disabled", false)
+      $('#ajax_concessionario_buscar').prop("disabled", false)
     
   checkbox_change = (selector) ->
     $('#'+selector).change ->
