@@ -8,6 +8,16 @@
       <div class="box-body">
 
         <div class="form-group row">
+          <label for="requerente_CPF" class="col-sm-1 control-label">CPF:</label>
+  	      <div class="col-sm-offset-1 col-sm-2">
+  	        <%= text_field_tag "requerente[CPF]", nil, class:"form-control" %>
+  				</div>
+  				<div class="col-sm-2">
+  		  	  <span id="ajax_requerente_buscar" class="btn btn-warning"><i class="fa fa-search"></i></span>
+  			  </div>
+  			</div>
+
+        <div class="form-group row">
   			  <label for="municipe_nome" class="col-sm-2 control-label">Nome:</label>
       	  <div class="col-sm-4">
         	  <%= text_field_tag "municipe[nome]", nil,  class:"form-control"%>
@@ -16,11 +26,6 @@
   				<label for="municipe_RG" class="col-sm-1 control-label">RG:</label>
           <div class="col-sm-2">
             <%= text_field_tag "municipe[RG]", nil, class:"form-control"%>
-  				</div>
-  										
-  				<label for="requerente_CPF" class="col-sm-1 control-label">CPF:</label>
-  	      <div class="col-sm-2">
-  	        <%= text_field_tag "requerente[CPF]", nil, class:"form-control" %>
   				</div>
   			</div>
   			
