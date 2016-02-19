@@ -76,8 +76,12 @@ th, td {
 }
 
 .highlight {
-  background-color: yellow;
+  background-color: #918F8A;
   &:hover {
-    background-color: yellow;
+    background-color: #918F8A;
   }
+}
+
+.modal-center {
+  padding-top: 5%;
 }

@@ -47,15 +47,15 @@
   				  </div>
   				
   				  <div class="col-sm-2">
-    			    <span id="ajax_renovacao_lote_criar_novo_lote" class="btn btn-block btn-success"><i class="fa fa-pencil"></i></span>
+    			    <span id="ajax_renovacao_lote_criar_novo_lote" class="btn btn-success"><i class="fa fa-plus"></i></span>
             </div>
     			    
     			  <div class="col-sm-2">
-  		  	    <span id="ajax_renovacao_lote_buscar" class="btn btn-block btn-warning"><i class="fa fa-search"></i></span>
+  		  	    <span id="ajax_renovacao_lote_buscar" class="btn btn-warning"><i class="fa fa-search"></i></span>
   			    </div>
   			    
   			    <div class="col-sm-2">
-  		  	    <span id="ajax_renovacao_lote_limpar" class="btn btn-block btn-default"><i class="fa fa-refresh"></i></span>
+  		  	    <span id="ajax_renovacao_lote_limpar" class="btn btn-default"><i class="fa fa-refresh"></i></span>
   			    </div>
   				</div>
   			</div>
@@ -138,3 +138,78 @@
       </div>
     </form>
   </div>
+  
+  
+  <div class="modal fade modal-center" id="modal_lote" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Criar novo lote</h4>
+        </div>
+        <div class="modal-body">
+          
+          <div class="row">
+            <div class=col-md-4>
+              <label class="control-label">Cemitério:</label>
+              <%= select_tag "novo_lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }), :prompt => "", class:"form-control" %>
+            </div>
+            <div class=col-md-4>
+        	    <label for="lote_quadra" class="control-label">Quadra:</label>
+            	<%= text_field_tag "novo_lote[quadra]", nil, class:"form-control" %>
+            </div>
+            <div class=col-md-4>
+      				<label for="lote_terreno" class="control-label">Terreno:</label>
+              <%= text_field_tag "novo_lote[terreno]", nil, class:"form-control" %>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class=col-md-4>
+      				<label for="lote_gleba" class="control-label">Gleba:</label>
+        	    <%= text_field_tag "novo_lote[gleba]", nil, class:"form-control" %>
+            </div>
+            <div class=col-md-4>
+      				<label for="lote_rua" class="control-label">Rua:</label>
+        	    <%= text_field_tag "novo_lote[rua]", nil, class:"form-control" %>
+            </div>
+            <div class=col-md-4>
+      				<label for="lote_avenida" class="control-label">Av.:</label>
+        	    <%= text_field_tag "novo_lote[avenida]", nil, class:"form-control" %>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class=col-md-4>
+      				<label for="lote_largura" class="control-label">Largura:</label>
+        	    <%= text_field_tag "novo_lote[largura]", nil, class:"form-control" %>
+            </div>
+            <div class=col-md-4>
+      				<label for="lote_comprimento" class="control-label">Comprimento:</label>
+        	    <%= text_field_tag "novo_lote[comprimento]", nil, class:"form-control" %>
+            </div>
+            <div class=col-md-4>
+      				<label class="control-label">Tipo Construção:</label>
+        	    <%= select_tag "novo_lote[tipo_construcao]", options_for_select([ "", "Capela", "Carneiro", "Columbário", "Gaveta" ]), class:"form-control" %>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class=col-md-4>
+      				<label for="lote_qtd_gaveta" class="col-sm-3 control-label">Qtd. Gavetas:</label>
+        	    <%= text_field_tag "novo_lote[qtd_gaveta]", nil, class:"form-control" %>
+            </div>
+            <div class=col-md-4>
+      				<label for="lote_qtd_ossario" class="col-sm-3 control-label">Qtd. Ossário:</label>
+        	    <%= text_field_tag "novo_lote[qtd_ossario]", nil, class:"form-control" %>
+            </div>
+          </div>
+  	    
+				</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="criar_novo_lote_modal">Criar lote</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->

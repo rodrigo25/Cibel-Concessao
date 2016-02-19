@@ -24,4 +24,14 @@ class CadastrosController < ApplicationController
       format.js { render :file => "/cadastros/partials/renovacao/ajax_renovacao_lote.js" }
     end
   end
+  
+  def novo_lote_modal
+    Lote.create(cemiterio_id: params[:cemiterio_id], quadra: params[:quadra], 
+                terreno: params[:terreno], gleba: params[:gleba], rua: params[:rua], 
+                avenida: params[:avenida], largura: params[:largura], comprimento: params[:comprimento],
+                tipo_construcao: params[:tipo_construcao], qtd_gaveta: params[:qtd_gaveta], qtd_ossario: params[:qtd_ossario])
+    respond_to do |format|
+      format.js { render :file => "/cadastros/partials/renovacao/novo_lote_modal.js" }
+    end
+  end
 end

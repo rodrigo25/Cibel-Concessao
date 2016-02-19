@@ -11,20 +11,14 @@ jQuery ->
     $('#lote_tipo_construcao').val("")
     $('#lote_qtd_gaveta').val("")
     $('#lote_qtd_ossario').val("")
-    val_cemiterio_id = $('#lote_cemiterio_id').val()
-    val_quadra = $('#lote_quadra').val()
-    val_terreno = $('#lote_terreno').val()
-    val_gleba = $('#lote_gleba').val()
-    val_rua = $('#lote_rua').val()
-    val_avenida = $('#lote_avenida').val()
     $.post("/ajax_renovacao_lote",
       {
-        cemiterio_id: val_cemiterio_id
-        quadra: val_quadra
-        terreno: val_terreno
-        gleba: val_gleba
-        rua: val_rua
-        avenida: val_avenida
+        cemiterio_id: $('#lote_cemiterio_id').val()
+        quadra: $('#lote_quadra').val()
+        terreno: $('#lote_terreno').val()
+        gleba: $('#lote_gleba').val()
+        rua: $('#lote_rua').val()
+        avenida: $('#lote_avenida').val()
       }
     )
   
@@ -46,19 +40,40 @@ jQuery ->
   $('#lote_cemiterio_id').change ->
     $('#corpo_tabela').html("")
     
+  # $("#ajax_renovacao_lote_criar_novo_lote").click ->
+  #   $('#lote_cemiterio_id').prop("disabled", false)
+  #   $('#lote_quadra').prop("disabled", false)
+  #   $('#lote_terreno').prop("disabled", false)
+  #   $('#lote_gleba').prop("disabled", false)
+  #   $('#lote_rua').prop("disabled", false)
+  #   $('#lote_avenida').prop("disabled", false)
+  #   $('#corpo_tabela').html("Criando novo lote")
+  #   $('#lote_largura').val("").prop("disabled", false)
+  #   $('#lote_comprimento').val("").prop("disabled", false)
+  #   $('#lote_tipo_construcao').val("").prop("disabled", false)
+  #   $('#lote_qtd_gaveta').val("").prop("disabled", false)
+  #   $('#lote_qtd_ossario').val("").prop("disabled", false)
+  
   $("#ajax_renovacao_lote_criar_novo_lote").click ->
-    $('#lote_cemiterio_id').prop("disabled", false)
-    $('#lote_quadra').prop("disabled", false)
-    $('#lote_terreno').prop("disabled", false)
-    $('#lote_gleba').prop("disabled", false)
-    $('#lote_rua').prop("disabled", false)
-    $('#lote_avenida').prop("disabled", false)
-    $('#corpo_tabela').html("Criando novo lote")
-    $('#lote_largura').val("").prop("disabled", false)
-    $('#lote_comprimento').val("").prop("disabled", false)
-    $('#lote_tipo_construcao').val("").prop("disabled", false)
-    $('#lote_qtd_gaveta').val("").prop("disabled", false)
-    $('#lote_qtd_ossario').val("").prop("disabled", false)
+    $('#modal_lote').modal("show")
+    
+  $('#criar_novo_lote_modal').click ->
+    $.post("/novo_lote_modal",
+      {
+        cemiterio_id: $('#novo_lote_cemiterio_id').val()
+        quadra: $('#novo_lote_quadra').val()
+        terreno: $('#novo_lote_terreno').val()
+        gleba: $('#novo_lote_gleba').val()
+        rua: $('#novo_lote_rua').val()
+        avenida: $('#novo_lote_avenida').val()
+        largura: $('#novo_lote_largura').val()
+        comprimento: $('#novo_lote_comprimento').val()
+        tipo_construcao: $('#novo_lote_tipo_construcao').val()
+        qtd_gaveta: $('#novo_lote_qtd_gaveta').val()
+        qtd_ossario: $('#novo_lote_qtd_ossario').val()
+      }
+    )
+    
   
   $('#ajax_renovacao_lote_limpar').click ->
     $('#lote_cemiterio_id').val("").prop("disabled", false)
