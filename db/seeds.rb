@@ -13,10 +13,10 @@ C = Categoria.create(valor: 2082.89)
 D = Categoria.create(valor: 1389.50)
 
 # CADASTRO DE TAXAS
-TaxaProtocolo.create(tipo: 'Gaveta', valor: 884.44)
-TaxaProtocolo.create(tipo: 'Ossário', valor: 24.50)
-TaxaProtocolo.create(tipo: 'Expediente', valor: 15.50)
-TaxaProtocolo.create(tipo: 'Carta de Concessão', valor: 22.35)
+Taxa.create(tipo: 'Gaveta', valor: 884.44)
+Taxa.create(tipo: 'Ossário', valor: 24.50)
+Taxa.create(tipo: 'Expediente', valor: 15.50)
+Taxa.create(tipo: 'Carta de Concessão', valor: 22.35)
 
 # CADASTRO DE ADMIM
 Funcionario.create(RF: '0000000', nome: 'Admin', password: '123456', email: 'admin@admin.com')

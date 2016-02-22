@@ -5,19 +5,20 @@ Rails.application.routes.draw do
 
   root 'sessions#new'
   
-  get  'login'                => 'sessions#new'
-  post 'login'                => 'sessions#create'
+  get  'login'                     => 'sessions#new'
+  post 'login'                     => 'sessions#create'
   
-  delete 'logout'             => 'sessions#destroy'
+  delete 'logout'                  => 'sessions#destroy'
   
-  get  'home'                 => 'home#home'
-  get  'lockscreen'           => 'lock#lockscreen'
-  post 'unlock'               => 'lock#unlock'
+  get  'home'                      => 'home#home'
+  get  'lockscreen'                => 'lock#lockscreen'
+  post 'unlock'                    => 'lock#unlock'
   
-  get  'renovacao'            => 'cadastros#renovacao'
-  post 'renovacao_form'       => 'cadastros#renovacao_form'
-  post 'ajax_renovacao_lote'  => 'cadastros#ajax_renovacao_lote'
-  post 'novo_lote_modal'      => 'cadastros#novo_lote_modal'
+  get  'renovacao'                 => 'cadastros#renovacao'
+  post 'renovacao_form'            => 'cadastros#renovacao_form'
+  post 'ajax_lote'                 => 'cadastros#ajax_lote'
+  post 'novo_lote_modal'           => 'cadastros#novo_lote_modal'
+  post 'ajax_pagamento'            => 'cadastros#ajax_pagamento'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

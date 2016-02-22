@@ -13,7 +13,11 @@
   			  <label class="col-sm-1 control-label">Cemitério:</label>
   			  
           <div class="col-xs-3">
-            <%= select_tag "lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }), :prompt => "", class:"form-control" %>
+            <% if params[:action] == 'concessao' %>
+              <%= select_tag "lote[cemiterio_id]", options_for_select(cemiterios_indeterminados), :prompt => "", class:"form-control" %>
+            <% elsif params[:action] == 'renovacao' %>
+              <%= select_tag "lote[cemiterio_id]", options_for_select(cemiterios_determinados), :prompt => "", class:"form-control" %>
+            <% end %>
   				</div>
   			</div>
   			
@@ -133,6 +137,11 @@
     	      <div class="col-sm-3">
       	      <%= text_field_tag "lote[qtd_ossario]", nil, class:"form-control" %>
   				  </div>
+  				  
+  				  <label for="tempo concessao" class="col-sm-3 control-label">tempo concessao:</label>
+    	      <div class="col-sm-3">
+      	      <%= text_field_tag "tempo_concessao", nil, class:"form-control" %>
+  				  </div>
   			  </div>
   			 </div>
       </div>
@@ -152,7 +161,11 @@
           <div class="row">
             <div class=col-md-4>
               <label class="control-label">Cemitério:</label>
-              <%= select_tag "novo_lote[cemiterio_id]", options_for_select(Cemiterio.all.collect{|x| [x.nome, x.id] }), :prompt => "", class:"form-control" %>
+            <% if params[:action] == 'concessao' %>
+              <%= select_tag "novo_lote[cemiterio_id]", options_for_select(cemiterios_indeterminados), :prompt => "", class:"form-control" %>
+            <% elsif params[:action] == 'renovacao' %>
+              <%= select_tag "novo_lote[cemiterio_id]", options_for_select(cemiterios_determinados), :prompt => "", class:"form-control" %>
+            <% end %>
             </div>
             <div class=col-md-4>
         	    <label for="lote_quadra" class="control-label">Quadra:</label>

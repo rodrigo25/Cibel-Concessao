@@ -1,6 +1,14 @@
 $(document).ready(function() {
-  	$('#rootwizard').bootstrapWizard({onTabClick: function(tab, navigation, index) {
-		// alert('on tab click disabled');
-		return false;
-	}});
+	$('#rootwizard_concessao_renovacao').bootstrapWizard(
+		{
+			onTabShow: function(tab, navigation, index) {
+				if (index === 4){
+					calcular_pagamento();
+				}
+			},
+			onTabClick: function(tab, navigation, index) {
+				return false;
+			}
+		}
+	);
 });

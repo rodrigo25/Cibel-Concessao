@@ -11,7 +11,7 @@ jQuery ->
     $('#lote_tipo_construcao').val("")
     $('#lote_qtd_gaveta').val("")
     $('#lote_qtd_ossario').val("")
-    $.post("/ajax_renovacao_lote",
+    $.post("/ajax_lote",
       {
         cemiterio_id: $('#lote_cemiterio_id').val()
         quadra: $('#lote_quadra').val()
