@@ -207,7 +207,7 @@ ActiveRecord::Schema.define(version: 20160211173442) do
   add_index "requerentes", ["CPF"], name: "index_requerentes_on_CPF", unique: true
   add_index "requerentes", ["municipe_id"], name: "index_requerentes_on_municipe_id"
 
-  create_table "taxas_protocolo", force: :cascade do |t|
+  create_table "taxas", force: :cascade do |t|
     t.string   "tipo"
     t.decimal  "valor"
     t.datetime "created_at", null: false

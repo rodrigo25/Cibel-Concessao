@@ -2,11 +2,6 @@ jQuery ->
   $('#rowclick tr').click (event) ->
     if (event.target.type != 'checkbox')
       $(this).find(':checkbox').click()
-      
-      
-      
-
-
 
   $('#emitente_checkbox').change ->
     # $(this).prop('checked')
@@ -39,3 +34,12 @@ jQuery ->
   checkbox_change("municipe_complemento")
   checkbox_change("municipe_RG")
   checkbox_change("municipe_telefone")
+  
+  calcular_pagamento = ->
+    $.post("/ajax_pagamento",
+      {
+        cemiterio_id: $('#lote_cemiterio_id').val()
+        qtd_gaveta: $('#lote_qtd_gaveta').val()
+        qtd_ossario: $('#lote_qtd_ossario').val()
+      }
+    )
