@@ -1,0 +1,113 @@
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">Valores</h3>
+    </div><!-- /.box-header -->
+		
+		<!-- form start -->
+    <form class="form-horizontal">
+      
+      <div class="box-body">
+        <div>
+          <table class="tabela-precos" id="rowclick">
+            <thead>
+              <tr class="tabela-precos-tr">
+                <th width="90%"><span class="text">Itens</span></th>
+                <th width="10%"><span class="text">Valor</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="disabled-row"> <td><input type="checkbox" disabled> Lote - 1,60x2,30 (3,68m²)</td> <td>R$ 5.113,36</td> </tr>
+              <tr class="disabled-row"> <td><input type="checkbox" disabled> 2 Gavetas</td> <td>R$ 1.768,88</td> </tr>
+              <tr> <td><input type="checkbox"> Taxa da Expediente</td> <td>R$ 15,50</td> </tr>
+              <tr> <td><input type="checkbox"> Carta de Concessão</td> <td>R$ 22,35</td> </tr>
+              <tr class="tabela-precos-tr-total bold"> <td>Total</td> <td>R$ 22,35</td> </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="form-group row" style="margin-top:15px">
+
+          <label class="col-sm-1 control-label">Parcelas:</label>
+          <div class="col-sm-2">
+            <%= select_tag "parcela[quantidade]", options_for_select("1".."24"), :prompt => "", class:"form-control" %>
+  				</div>
+            
+          <label for="parcela_valor" class="col-sm-1 control-label">Valor:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "parcela[valor]", "R$ 25.000,00", class:"form-control", disabled: true, :style => "text-align: center" %>
+          </div>
+          
+        </div>
+  			
+  		</div><!-- /.box-body -->
+									
+	  </form>
+	</div><!-- /.box -->
+	
+  
+  
+  
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">Informações</h3>
+    </div><!-- /.box-header -->
+		
+		<!-- form start -->
+    <form class="form-horizontal">
+      
+      <div class="box-body">
+        
+        <div class="form-group row">
+          <div class="col-sm-5">
+            <%= check_box_tag "emitente_checkbox" %> 
+            <label class="control-label label-align">Requerente é o Emitente?</label>
+          </div>
+        </div>
+        
+        
+        <div class="form-group row">
+          <label for="emitente_municipe_nome" class="col-sm-1 control-label">Emitente:</label>
+          <div class="col-sm-4">
+            <%= text_field_tag "emitente_municipe[nome]", nil, class:"form-control" %>
+          </div>
+        </div>
+        
+        <div class="form-group row">    
+          <label for="emitente_municipe_rua" class="col-sm-1 control-label">Rua:</label>
+  	      <div class="col-sm-3">
+  	        <%= text_field_tag "emitente_municipe[rua]", nil, class:"form-control" %>
+					</div>
+										
+					<label for="emitente_municipe_numero" class="col-sm-1 control-label">Numero:&nbsp&nbsp</label>
+          <div class="col-sm-1">
+            <%= text_field_tag "emitente_municipe[numero]", nil, class:"form-control" %>
+					</div>
+										
+					<label for="emitente_municipe_complemento" class="col-sm-offset-1 col-sm-1 control-label">Compl.:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "emitente_municipe[complemento]", nil, class:"form-control" %>
+					</div>
+
+        </div>
+  			    
+  			    
+  		  <div class="form-group row">
+          <label for="emitente_municipe_RG" class="col-sm-1 control-label">RG:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "emitente_municipe[RG]", nil, class:"form-control" %>
+          </div>
+          
+          <label for="emitente_municipe_telefone" class="col-sm-offset-1 col-sm-1 control-label">Tel.:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "emitente_municipe[telefone]", nil, class:"form-control" %>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+      </div>
+    </form>
+  </div>
+        

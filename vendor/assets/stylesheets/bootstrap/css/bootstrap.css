@@ -4875,12 +4875,19 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   background-color: #eee;
 }
 .pager .next > a,
-.pager .next > span {
+.pager .next > span,
+.pager .next > a:focus{
   float: right;
+
 }
+
+
+
 .pager .previous > a,
-.pager .previous > span {
+.pager .previous > span,
+.pager .previous > a:focus{
   float: left;
+
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,

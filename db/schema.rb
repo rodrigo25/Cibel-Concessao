@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223124601) do
+ActiveRecord::Schema.define(version: 20160211173442) do
 
   create_table "categorias", force: :cascade do |t|
     t.decimal  "valor"
@@ -66,21 +66,21 @@ ActiveRecord::Schema.define(version: 20151223124601) do
   add_index "funcionarios", ["RF"], name: "index_funcionarios_on_RF"
 
   create_table "lotes", force: :cascade do |t|
-    t.string   "quadra"
-    t.string   "terreno"
-    t.string   "gleba"
-    t.string   "rua"
-    t.string   "avenida"
-    t.float    "largura"
-    t.float    "comprimento"
-    t.string   "tipo_construcao"
-    t.integer  "qtd_gaveta"
-    t.integer  "qtd_ossario"
-    t.string   "estado"
+    t.string   "quadra",            default: ""
+    t.string   "terreno",           default: ""
+    t.string   "gleba",             default: ""
+    t.string   "rua",               default: ""
+    t.string   "avenida",           default: ""
+    t.float    "largura",           default: 0.0
+    t.float    "comprimento",       default: 0.0
+    t.string   "tipo_construcao",   default: ""
+    t.integer  "qtd_gaveta",        default: 0
+    t.integer  "qtd_ossario",       default: 0
+    t.string   "estado",            default: ""
     t.integer  "concessionario_id"
     t.integer  "cemiterio_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   add_index "lotes", ["avenida"], name: "index_lotes_on_avenida"
@@ -95,9 +95,11 @@ ActiveRecord::Schema.define(version: 20151223124601) do
     t.string   "nome"
     t.string   "RG"
     t.string   "telefone"
-    t.string   "endereco"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "numero"
+    t.string   "rua"
+    t.string   "complemento"
   end
 
   add_index "municipes", ["RG"], name: "index_municipes_on_RG"

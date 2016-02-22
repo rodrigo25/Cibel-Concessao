@@ -1,17 +1,17 @@
 class CreateLotes < ActiveRecord::Migration
   def change
     create_table :lotes do |t|
-      t.string :quadra
-      t.string :terreno
-      t.string :gleba
-      t.string :rua
-      t.string :avenida
-      t.float :largura
-      t.float :comprimento
-      t.string :tipo_construcao
-      t.integer :qtd_gaveta
-      t.integer :qtd_ossario
-      t.string :estado
+      t.string :quadra, :default => ''
+      t.string :terreno, :default => ''
+      t.string :gleba, :default => ''
+      t.string :rua, :default => ''
+      t.string :avenida, :default => ''
+      t.float :largura, :default => 0.0
+      t.float :comprimento, :default => 0.0
+      t.string :tipo_construcao, :default => ''
+      t.integer :qtd_gaveta, :default => 0
+      t.integer :qtd_ossario, :default => 0
+      t.string :estado, :default => ''
       t.references :concessionario, index: true, foreign_key: true
       t.references :cemiterio, index: true, foreign_key: true
 

@@ -1,0 +1,10 @@
+$('#corpo_tabela').html("");
+<% if @lotes.any? %>
+  <% @lotes.each do |lote| %>
+    <% conc = lote.concessionario %>
+    <% conc ? conc = conc.requerente.municipe.nome : conc = "" %>
+    $('#corpo_tabela').append("<tr data-cemiterio=<%= lote.cemiterio.nome %> data-largura=<%= lote.largura %> data-comprimento=<%= lote.comprimento %> data-tipo_construcao=<%= lote.tipo_construcao %> data-qtd_gaveta=<%= lote.qtd_gaveta %> data-qtd_ossario=<%= lote.qtd_ossario %> > <td class='quadra'><%= lote.quadra %></td> <td class='terreno'><%= lote.terreno %></td> <td class='gleba'><%= lote.gleba %></td> <td class='rua'><%= lote.rua %></td> <td class='avenida'><%= lote.avenida %></td> <td class='concessionario'><%= conc %></td> <td class='estado'><%= lote.estado %></td> </tr>");
+  <% end %>
+<% else %>
+  $('#corpo_tabela').html("Não Encontrado");
+<% end %>

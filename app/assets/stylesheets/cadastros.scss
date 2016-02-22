@@ -2,6 +2,90 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.label-align {
-  text-align: left !important;
+.align-center{
+  text-align: center !important;
+}
+
+.min-size-div{
+  height: 315px;
+
+}
+
+.nprocesso-page{
+  position: relative;
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+
+
+#table-wrapper {
+  position:relative;
+  
+}
+#table-scroll {
+  height:150px;
+  overflow:auto;  
+  margin-top:20px;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 2px;
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid;
+  }
+}
+#table-wrapper table {
+  width:100%;
+}
+
+tr:hover{
+  background-color:#f5f5f5
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.tabela-precos{
+    position:relative;
+    overflow:auto;
+    width:100%;
+    border-bottom: 2px solid;
+    table-layout: fixed;
+
+}
+
+.tabela-precos-tr{
+  border-bottom: 2px solid;
+}
+th, td {
+  padding: 6px;
+}
+
+
+.disabled-row{
+  color: #A0A0A0;
+  cursor: not-allowed;
+}
+
+.highlight {
+  background-color: #918F8A;
+  &:hover {
+    background-color: #918F8A;
+  }
+}
+
+.modal-center {
+  padding-top: 5%;
+}
+
+.tabela-precos-tr-total{
+  border-top: 1px solid;
 }

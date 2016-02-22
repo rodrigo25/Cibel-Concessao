@@ -1,0 +1,143 @@
+<div class="form-group row">
+  <div class="col-sm-4">
+    <div class="col-sm-offset-1">
+      <%= check_box_tag "concessionario_checkbox" %> 
+      <label class="control-label label-align">Requerente é o concessionário?</label>
+    </div>
+  </div>
+</div>
+
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">Dados Pessoais</h3>
+    </div><!-- /.box-header -->
+		
+		<!-- form start -->
+    <form class="form-horizontal">
+
+      <div class="box-body">
+
+        <div class="form-group row">
+          <label for="concessionario_requerente_CPF" class="col-sm-1 control-label">CPF:</label>
+  	      <div class="col-sm-offset-1 col-sm-2">
+  	        <%= text_field_tag "concessionario_requerente[CPF]", nil, class:"form-control" %> <br>
+  				</div>
+  				<div class="col-sm-2">
+  		  	  <span id="ajax_concessionario_buscar" class="btn btn-warning"><i class="fa fa-search"></i></span>
+  			  </div>
+  			</div>
+  			
+        <div class="form-group row">
+  			  <label for="concessionario_municipe_nome" class="col-sm-2 control-label label-align">Nome:</label>
+      	  <div class="col-sm-4">
+        	  <%= text_field_tag "concessionario_municipe[nome]", nil, class:"form-control" %>
+  				</div>
+  										
+  				<label for="concessionario_municipe_RG" class="col-sm-1 control-label">RG:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "concessionario_municipe[RG]", nil, class:"form-control" %>
+  				</div>
+  			</div>
+  			
+  			
+
+
+  			<div class="form-group row">
+          <label for="concessionario_requerente_dt_nascimento" class="col-sm-2 control-label">Dt. Nascimento:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "concessionario_requerente[dt_nascimento]", nil, class:"form-control" %>
+  				</div>
+  										
+          <label class="col-sm-offset-2 col-sm-1" style="text-align: left;">Estado Civíl:</label>
+          <div class="col-xs-2">
+            <%= select_tag "concessionario_requerente[estado_civil]", options_for_select([ "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viúvo(a)", "Separado(a)", "Companheiro(a)" ]), :prompt => "", class:"form-control" %>
+  				</div>	
+        </div>
+        
+        <div class="form-group row">
+          <label for="concessionario_requerente_nacionalidade" class="col-sm-2 control-label">Nacionalidade:</label>
+          <div class="col-sm-4">
+            <%= text_field_tag "concessionario_requerente[nacionalidade]", nil, class:"form-control" %>
+  				</div>
+  										
+  				<label for="concessionario_requerente_profissao" class="col-sm-1 control-label">Profissão:</label>
+        	<div class="col-sm-2">
+        	  <%= text_field_tag "concessionario_requerente[profissao]", nil, class:"form-control" %>
+  				</div>
+  			</div>
+  			
+  			<div class="form-group row">
+    	    <label for="concessionario_requerente_email" class="col-sm-2 control-label">Email:</label>
+      	  <div class="col-sm-4">
+      	    <%= email_field_tag "concessionario_requerente[email]", nil, class:"form-control" %>
+  				</div>
+  											
+  				<label for="concessionario_municipe_telefone" class="col-sm-1 control-label">Tel.:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "concessionario_municipe[telefone]", nil, class:"form-control" %>
+  				</div>
+  										
+          <label for="concessionario_requerente_celular" class="col-sm-1 control-label">Cel.:</label>
+    	    <div class="col-sm-2">
+      	    <%= text_field_tag "concessionario_requerente[celular]", nil, class:"form-control" %>
+  				</div>
+  			</div>
+        
+        
+      </div><!-- /.box-body -->
+									
+	  </form>
+	</div><!-- /.box -->
+	
+  <div class="box box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">Endereço</h3>
+    </div><!-- /.box-header -->
+		<!-- form start -->
+	  <form class="form-horizontal">
+  	  <div class="box-body">
+
+    	  <div class="form-group">
+      	  <label for="concessionario_requerente_CEP" class="col-sm-1 control-label">CEP:</label>
+          <div class="col-xs-3">
+            <%= text_field_tag "concessionario_requerente[CEP]", nil, class:"form-control" %>
+				  </div>
+				</div>
+									
+			  <div class="form-group row">
+	        <label for="concessionario_municipe_rua" class="col-sm-1 control-label">Rua:</label>
+  	      <div class="col-sm-3">
+    	      <%= text_field_tag "concessionario_municipe[rua]", nil, class:"form-control" %>
+					</div>
+										
+					<label for="concessionario_municipe_numero" class="col-sm-1 control-label">Numero:&nbsp&nbsp</label>
+          <div class="col-sm-1">
+            <%= text_field_tag "concessionario_municipe[numero]", nil, class:"form-control" %>
+					</div>
+										
+					<label for="concessionario_municipe_complemento" class="col-sm-1 control-label">Compl.:</label>
+          <div class="col-sm-2">
+            <%= text_field_tag "concessionario_municipe[complemento]", nil, class:"form-control" %>
+					</div>
+										
+					<label for="concessionario_requerente_bairro" class="col-sm-1 control-label">Bairro:</label>
+    	    <div class="col-sm-2">
+      	    <%= text_field_tag "concessionario_requerente[bairro]", nil, class:"form-control" %>
+					</div>
+				</div>
+
+        <div class="form-group row">
+          <label for="concessionario_requerente_cidade" class="col-sm-1 control-label">Cidade:</label>
+          <div class="col-sm-3">
+	          <%= text_field_tag "concessionario_requerente[cidade]", nil, class:"form-control" %>
+					</div>
+										
+    	    <label class="col-sm-1" style="align: right">UF:</label>
+          <div class="col-sm-2">
+            <%= select_tag "concessionario_requerente[estado]" , options_for_select(estados), :prompt => "", class:"form-control" %>
+          </div>
+									
+				</div>					
+			</div><!-- /.box-body -->
+		</form>
+  </div><!-- /.box -->
