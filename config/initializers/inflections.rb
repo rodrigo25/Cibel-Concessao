@@ -14,7 +14,7 @@
 ActiveSupport::Inflector.inflections do |inflect|
    inflect.irregular 'categoria', 'categorias'
    inflect.irregular 'processo_geral', 'processos_gerais'
-   inflect.irregular 'taxa_protocolo', 'taxas_protocolo'
+   inflect.irregular 'taxa', 'taxas'
    inflect.irregular 'concessionario', 'concessionarios'
    inflect.irregular 'funcionario', 'funcionarios'
    inflect.irregular 'lote', 'lotes'

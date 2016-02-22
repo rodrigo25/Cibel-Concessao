@@ -38,4 +38,20 @@ module ApplicationHelper
       "PB", "PA", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SE", "SP", "TO"
     ]
   end
+  
+  def cemiterios_indeterminados
+    cemits = []
+    Cemiterio.all.each do |c|
+      cemits << [c.nome, c.id] if c.prazo_concessao.downcase  == "indeterminado"
+    end
+    cemits
+  end
+  
+  def cemiterios_determinados
+    cemits = []
+    Cemiterio.all.each do |c|
+      cemits << [c.nome, c.id] if c.prazo_concessao.downcase  == "determinado"
+    end
+    cemits
+  end
 end

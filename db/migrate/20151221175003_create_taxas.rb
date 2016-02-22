@@ -1,6 +1,6 @@
-class CreateTaxasProtocolo < ActiveRecord::Migration
+class CreateTaxas < ActiveRecord::Migration
   def change
-    create_table :taxas_protocolo do |t|
+    create_table :taxas do |t|
       t.string :tipo
       t.decimal :valor
 
