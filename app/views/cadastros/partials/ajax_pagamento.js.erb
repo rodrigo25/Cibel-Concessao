@@ -1,6 +1,9 @@
-$('#item_lote').text("Lote - "+<%= @largura %>+"x"+<%= @comprimento %>+" ("+<%= @metros_quadrados_string %>+")");
-$('#valor_lote').text(<%= @valor_lote %>);
-$('#item_gaveta').text(<%= @qtd_gaveta %>+" Gaveta(s)");
-$('#valor_gaveta').text(<%= @valor_gaveta %>);
-$('#item_ossario').text(<%= @qtd_ossario %>+" Ossário(s)");
-$('#valor_ossario').text(<%= @valor_ossario %>);
+$('#item_lote').text("Lote - "+"<%= @largura %>"+"mx"+"<%= @comprimento %>"+"m ("+"<%= @metros_quadrados %>"+"m²)");
+$('#valor_lote').text("<%= @valor_lote %>");
+$('#item_gaveta').text("<%= @qtd_gaveta %>"+" Gaveta(s)");
+$('#valor_gaveta').text("<%= @valor_gaveta %>");
+$('#item_ossario').text("<%= @qtd_ossario %>"+" Ossário(s)");
+$('#valor_ossario').text("<%= @valor_ossario %>");
+$('#valor_expediente').text("<%= @taxa_expediente %>");
+$('#valor_carta').text("<%= @taxa_carta %>");
+$('#valor_total').text("<%= @total_sem_taxas %>");

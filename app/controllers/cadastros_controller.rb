@@ -42,21 +42,28 @@ class CadastrosController < ApplicationController
     @largura = params[:largura]
     @comprimento = params[:comprimento]
     @metros_quadrados = BigDecimal(@largura) * BigDecimal(@comprimento)
-    @metros_quadrados_string = @metros_quadrados.to_s
     @valor_categoria = @cemiterio.categoria.valor
+    @valor_lote = @valor_categoria * @metros_quadrados
     @quantidade_gaveta = BigDecimal(params[:qtd_gaveta])
     @taxa_gaveta = Taxa.find_by(tipo: "Gaveta").valor
+    @valor_gaveta = @taxa_gaveta * @quantidade_gaveta
     @quantidade_ossario = BigDecimal(params[:qtd_ossario])
     @taxa_ossario = Taxa.find_by(tipo: "Ossário").valor
+    @valor_ossario = @taxa_ossario * @quantidade_ossario
+    
     
     # resultados:
-    @valor_lote = (@valor_categoria * @metros_quadrados).to_s
-    @valor_gaveta = (@taxa_gaveta * @quantidade_gaveta).to_s
-    @valor_gaveta = "R$00.00" if @quantidade_gaveta == 0
-    @valor_ossario = (@taxa_ossario * @quantidade_ossario).to_s
-    @valor_ossarioa = "R$00.00" if @quantidade_ossario == 0
-    @taxa_expediente = Taxa.find_by(tipo: "Expediente").valor.to_s
-    @taxa_carta = Taxa.find_by(tipo: "Carta de Concessão").valor.to_s
+    @total_sem_taxas = ActionController::Base.helpers.number_with_precision(@valor_lote + @valor_gaveta + @valor_ossario, :precision => 2)
+    @largura = ActionController::Base.helpers.number_with_precision(@largura, :precision => 1)
+    @comprimento = ActionController::Base.helpers.number_with_precision(@comprimento, :precision => 1)
+    @valor_lote = ActionController::Base.helpers.number_to_currency(@valor_categoria * @metros_quadrados)
+    @metros_quadrados = ActionController::Base.helpers.number_with_precision(@metros_quadrados, :precision => 1)
+    @valor_gaveta = ActionController::Base.helpers.number_to_currency(@taxa_gaveta * @quantidade_gaveta)
+    @valor_gaveta = "R$ 00.00" if @quantidade_gaveta == 0
+    @valor_ossario = ActionController::Base.helpers.number_to_currency(@taxa_ossario * @quantidade_ossario)
+    @valor_ossario = "R$ 00.00" if @quantidade_ossario == 0
+    @taxa_expediente = ActionController::Base.helpers.number_to_currency(Taxa.find_by(tipo: "Expediente").valor)
+    @taxa_carta = ActionController::Base.helpers.number_to_currency(Taxa.find_by(tipo: "Carta de Concessão").valor)
     # resultados //
     
     respond_to do |format|

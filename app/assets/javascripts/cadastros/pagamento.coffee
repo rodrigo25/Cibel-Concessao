@@ -21,12 +21,10 @@ jQuery ->
       $('#emitente_municipe_complemento').val("").prop("disabled", false)
       $('#emitente_municipe_RG').val("").prop("disabled", false)
       $('#emitente_municipe_telefone').val("").prop("disabled", false)
-      
 
   checkbox_change = (selector) ->
     $('#'+selector).change ->
       $('#emitente_checkbox').click() if $('#emitente_checkbox').prop("checked", true)
-      
 
   checkbox_change("municipe_nome")
   checkbox_change("municipe_rua")
@@ -34,3 +32,12 @@ jQuery ->
   checkbox_change("municipe_complemento")
   checkbox_change("municipe_RG")
   checkbox_change("municipe_telefone")
+  
+  
+  $('#rowclick').delegate ".checkbox_taxas", "change", ->
+    if $(this).prop('checked')
+      alert "oi"
+      # soma
+    else
+      alert "tchau"
+      # subtrai
