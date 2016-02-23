@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post 'login'                     => 'sessions#create'
   
   delete 'logout'                  => 'sessions#destroy'
-  
+
   get  'home'                      => 'home#home'
   get  'lockscreen'                => 'lock#lockscreen'
   post 'unlock'                    => 'lock#unlock'

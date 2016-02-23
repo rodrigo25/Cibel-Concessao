@@ -35,9 +35,30 @@ class CadastrosController < ApplicationController
   end
   
   def ajax_pagamento
-    @cemiterio = Cemiterio.find(params[:cemiterio_id])
+    
+    @cemiterio = Cemiterio.find_by(id: params[:cemiterio_id])
     @qtd_gaveta = params[:qtd_gaveta]
     @qtd_ossario = params[:qtd_ossario]
+    @largura = params[:largura]
+    @comprimento = params[:comprimento]
+    @metros_quadrados = BigDecimal(@largura) * BigDecimal(@comprimento)
+    @metros_quadrados_string = @metros_quadrados.to_s
+    @valor_categoria = @cemiterio.categoria.valor
+    @quantidade_gaveta = BigDecimal(params[:qtd_gaveta])
+    @taxa_gaveta = Taxa.find_by(tipo: "Gaveta").valor
+    @quantidade_ossario = BigDecimal(params[:qtd_ossario])
+    @taxa_ossario = Taxa.find_by(tipo: "Ossário").valor
+    
+    # resultados:
+    @valor_lote = (@valor_categoria * @metros_quadrados).to_s
+    @valor_gaveta = (@taxa_gaveta * @quantidade_gaveta).to_s
+    @valor_gaveta = "R$00.00" if @quantidade_gaveta == 0
+    @valor_ossario = (@taxa_ossario * @quantidade_ossario).to_s
+    @valor_ossarioa = "R$00.00" if @quantidade_ossario == 0
+    @taxa_expediente = Taxa.find_by(tipo: "Expediente").valor.to_s
+    @taxa_carta = Taxa.find_by(tipo: "Carta de Concessão").valor.to_s
+    # resultados //
+    
     respond_to do |format|
       format.js { render :file => "/cadastros/partials/ajax_pagamento.js" }
     end

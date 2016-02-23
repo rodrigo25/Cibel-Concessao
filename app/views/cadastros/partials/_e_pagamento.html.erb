@@ -16,12 +16,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="disabled-row"> <td><input type="checkbox" disabled checked> <span id="valor_lote">Lote - 1,60x2,30 (3,68m²)</span> </td> <td>R$ 5.113,36</td> </tr>
-              <tr class="disabled-row"> <td><input type="checkbox" disabled checked> 2 Gavetas</td> <td>R$ 1.768,88</td> </tr>
-              <tr class="disabled-row"> <td><input type="checkbox" disabled checked> 2 Ossuarios</td> <td>R$ 1.768,88</td> </tr>
-              <tr> <td><input type="checkbox"> Taxa da Expediente</td> <td>R$ 15,50</td> </tr>
-              <tr> <td><input type="checkbox"> Carta de Concessão</td> <td>R$ 22,35</td> </tr>
-              <tr class="tabela-precos-tr-total bold"> <td>Total</td> <td>R$ 22,35</td> </tr>
+              <tr class="disabled-row"> <td><input type="checkbox" disabled checked> <span id="item_lote"></span> </td> <td><span id="valor_lote"></span></td> </tr>
+              <tr class="disabled-row"> <td><input type="checkbox" disabled checked> <span id="item_gaveta"></span> </td> <td><span id="valor_lote"></span></td> </tr>
+              <tr class="disabled-row"> <td><input type="checkbox" disabled checked> <span id="item_ossario"></span> </td> <td><span id="valor_lote"></span></td> </tr>
+              <tr> <td><input type="checkbox"> Taxa da Expediente</td> <td><span id="valor_expediente"></span></td> </tr>
+              <tr> <td><input type="checkbox"> Carta de Concessão</td> <td><span id="valor_carta"></span></td> </tr>
+              <tr class="tabela-precos-tr-total bold"> <td>Total</td> <td><span id="valor_total"></span></td> </tr>
             </tbody>
           </table>
         </div>
@@ -35,7 +35,7 @@
             
           <label for="parcela_valor" class="col-sm-1 control-label">Valor:</label>
           <div class="col-sm-2">
-            <%= text_field_tag "parcela[valor]", "R$ 25.000,00", class:"form-control", disabled: true, :style => "text-align: center" %>
+            <%= text_field_tag "parcela[valor]", nil, class:"form-control", disabled: true, :id => "valor_parcela", :style => "text-align: center" %>
           </div>
           
         </div>

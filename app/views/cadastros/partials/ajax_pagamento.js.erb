@@ -1,1 +1,6 @@
-alert("daqui");
+$('#item_lote').text("Lote - "+<%= @largura %>+"x"+<%= @comprimento %>+" ("+<%= @metros_quadrados_string %>+")");
+$('#valor_lote').text(<%= @valor_lote %>);
+$('#item_gaveta').text(<%= @qtd_gaveta %>+" Gaveta(s)");
+$('#valor_gaveta').text(<%= @valor_gaveta %>);
+$('#item_ossario').text(<%= @qtd_ossario %>+" Ossário(s)");
+$('#valor_ossario').text(<%= @valor_ossario %>);
