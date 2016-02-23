@@ -20,6 +20,7 @@ jQuery ->
       $('#concessionario_requerente_bairro').val($('#requerente_bairro').val()).prop("disabled", true)
       $('#concessionario_requerente_cidade').val($('#requerente_cidade').val()).prop("disabled", true)
       $('#concessionario_requerente_estado').val($('#requerente_estado').val()).prop("disabled", true)
+      $('#concessionario_dt_obito').val("").prop("disabled", true)
       $('#ajax_concessionario_buscar').prop("disabled", true)
     else
       $('#concessionario_municipe_nome').val("").prop("disabled", false)
@@ -39,6 +40,7 @@ jQuery ->
       $('#concessionario_requerente_bairro').val("").prop("disabled", false)
       $('#concessionario_requerente_cidade').val("").prop("disabled", false)
       $('#concessionario_requerente_estado').val("").prop("disabled", false)
+      $('#concessionario_dt_obito').val("").prop("disabled", false)
       $('#ajax_concessionario_buscar').prop("disabled", false)
     
   checkbox_change = (selector) ->
@@ -62,3 +64,11 @@ jQuery ->
   checkbox_change("requerente_bairro")
   checkbox_change("requerente_cidade")
   checkbox_change("requerente_estado")
+  
+  
+  $("#ajax_consessionario_buscar").click ->
+    $.post("/ajax_buscar_concessionario_cpf",
+      {
+        concessionario_CPF: $('#concessionario_requerente_CPF').val()
+      }
+    )

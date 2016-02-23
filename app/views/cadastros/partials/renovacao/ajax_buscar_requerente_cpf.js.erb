@@ -1,3 +1,4 @@
+$('#requerente_CPF').prop("disabled", true);
 $('#municipe_nome').val("<%= @municipe.nome %>").prop("disabled", true);
 $('#municipe_RG').val("<%= @municipe.RG %>").prop("disabled", true);
 $('#requerente_dt_nascimento').val("<%= @requerente.dt_nascimento.strftime("%d/%m/%Y") %>").prop("disabled", true);

@@ -9,6 +9,7 @@ jQuery ->
     
   
   $("#ajax_requerente_limpar").click ->
+    $('#requerente_CPF').val("").prop("disabled", false);
     $('#municipe_nome').val("").prop("disabled", false);
     $('#municipe_RG').val("").prop("disabled", false);
     $('#requerente_dt_nascimento').val("").prop("disabled", false);
