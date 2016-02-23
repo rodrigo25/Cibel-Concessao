@@ -1,5 +1,5 @@
 jQuery ->
- $('#concessionario_checkbox').change ->
+  $('#concessionario_checkbox').change ->
     # $(this).prop('checked')
     # quando eu do check, ele retorna true
     if $(this).prop('checked')

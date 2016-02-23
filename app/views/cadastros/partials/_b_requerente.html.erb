@@ -6,7 +6,7 @@
 		<!-- form start -->
     <form class="form-horizontal">
       <div class="box-body">
-
+        
         <div class="form-group row">
           <label for="requerente_CPF" class="col-sm-1 control-label">CPF:</label>
   	      <div class="col-sm-offset-1 col-sm-2">
@@ -14,6 +14,7 @@
   				</div>
   				<div class="col-sm-2">
   		  	  <span id="ajax_requerente_buscar" class="btn btn-warning"><i class="fa fa-search"></i></span>
+  		  	  <span id="ajax_requerente_limpar" class="btn btn-default"><i class="fa fa-refresh"></i></span>
   			  </div>
   			</div>
 
@@ -48,7 +49,7 @@
   				</div>
   										
   				<label for="requerente_profissao" class="col-sm-1 control-label">Profissão:</label>
-        	<div class="col-sm-2">
+        	<div class="col-sm-3">
         	  <%= text_field_tag "requerente[profissao]", nil, class:"form-control" %>
   				</div>
   			</div>
@@ -83,7 +84,7 @@
 		<!-- form start -->
 	  <form class="form-horizontal">
   	  <div class="box-body">
-
+				
     	  <div class="form-group">
       	  <label for="requerente_CEP" class="col-sm-1 control-label">CEP:</label>
           <div class="col-xs-3">

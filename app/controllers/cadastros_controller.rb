@@ -63,4 +63,19 @@ class CadastrosController < ApplicationController
       format.js { render :file => "/cadastros/partials/ajax_pagamento.js" }
     end
   end
+  
+  
+  def ajax_buscar_requerente_cpf
+    @requerente = Requerente.find_by(cpf: params[:requerente_CPF])
+    if @requerente 
+      @municipe = Municipe.find(@requerente.municipe_id)
+      respond_to do |format|
+        format.js { render :file => "/cadastros/partials/renovacao/ajax_buscar_requerente_cpf.js" }
+      end
+    else
+      # exibir mensagem que não achou
+    end
+  end
+  
+  
 end
