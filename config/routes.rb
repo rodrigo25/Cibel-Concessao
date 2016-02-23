@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   post 'ajax_lote'                 => 'cadastros#ajax_lote'
   post 'novo_lote_modal'           => 'cadastros#novo_lote_modal'
   post 'ajax_pagamento'            => 'cadastros#ajax_pagamento'
+  
+  post 'ajax_renovacao_lote'  => 'cadastros#ajax_renovacao_lote'
+  post 'ajax_buscar_requerente_cpf'  => 'cadastros#ajax_buscar_requerente_cpf'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -25,17 +25,17 @@ Funcionario.create(RF: '6666666', nome: 'Rodrigo', password: '123456', email: 'r
 Funcionario.create(RF: '9999999', nome: 'Lucas', password: '123456', email: 'lucas@cibel.com')
 
 #CADASTRO DE MUNICIPE
-municipe_joao = Municipe.create(nome: 'João da Silva', RG: '789652146', telefone: '5551-2596')
-municipe_maria = Municipe.create(nome: 'Maria de Oliveira', RG: '879542159', telefone: '5551-9877')
-municipe_mario = Municipe.create(nome: 'Mario Augusto', RG: '995888854', telefone: '5553-6989')
+municipe_joao = Municipe.create(nome: 'João da Silva', RG: '789652146', telefone: '5551-2596', rua: 'Rua Columbus', numero: '25', complemento: '')
+municipe_maria = Municipe.create(nome: 'Maria de Oliveira', RG: '879542159', telefone: '5551-9877', rua: 'Rua dos Alfineiros', numero: '09', complemento: '')
+municipe_mario = Municipe.create(nome: 'Mario Augusto', RG: '995888854', telefone: '5553-6989', rua: 'Rua das Rosas', numero: '35', complemento: 'apt. 108')
 
 #CADASTRO DE REQUERENTE
 requerente_joao = Requerente.create(CPF: '45698778966', dt_nascimento: '07/04/1969', CEP: '04213-001', bairro: 'Ipiranga', cidade: 'São Paulo', 
-    nacionalidade: 'Brasileiro', estado: 'São Paulo', estado_civil: 'Casado', profissao: 'Professor Universitário', celular: '98798-8989', email: 'joao.silva@cibel.com', municipe: municipe_joao)
+    nacionalidade: 'Brasileiro', estado: 'SP', estado_civil: 'Casado(a)', profissao: 'Professor Universitário', celular: '98798-8989', email: 'joao.silva@cibel.com', municipe: municipe_joao)
 requerente_maria = Requerente.create(CPF: '85236996322', dt_nascimento: '09/08/1964', CEP: '09632-040', bairro: 'Rudge Ramos', cidade: 'São Bernardo do Campo', 
-    nacionalidade: 'Brasileiro', estado: 'São Paulo', estado_civil: 'Casado', profissao: 'Funcionário Público Estadual', celular: '96336-5452', email: 'maria.oliveira@cibel.com', municipe: municipe_maria)
+    nacionalidade: 'Brasileiro', estado: 'SP', estado_civil: 'Casado(a)', profissao: 'Funcionário Público Estadual', celular: '96336-5452', email: 'maria.oliveira@cibel.com', municipe: municipe_maria)
 requerente_mario = Requerente.create(CPF: '15962362377', dt_nascimento: '25/12/1958', CEP: '03717-004', bairro: 'Cangaíba', cidade: 'São Paulo', 
-    nacionalidade: 'Brasileiro', estado: 'São Paulo', estado_civil: 'Viúvo', profissao: 'Taxista', celular: '99989-9669', email: 'mario.augusto@cibel.com', municipe: municipe_mario)
+    nacionalidade: 'Brasileiro', estado: 'SP', estado_civil: 'Viúvo(a)', profissao: 'Taxista', celular: '99989-9669', email: 'mario.augusto@cibel.com', municipe: municipe_mario)
 
 #CADASTRO DE CONCESSIONÁRIO
 concessionario_joao = Concessionario.create(requerente: requerente_mario)
