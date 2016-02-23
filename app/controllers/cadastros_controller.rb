@@ -68,7 +68,7 @@ class CadastrosController < ApplicationController
   def ajax_buscar_requerente_cpf
     @requerente = Requerente.find_by(cpf: params[:requerente_CPF])
     if @requerente 
-      @municipe = Municipe.find(@requerente.municipe_id)
+      @municipe = @requerente.municipe
       respond_to do |format|
         format.js { render :file => "/cadastros/partials/renovacao/ajax_buscar_requerente_cpf.js" }
       end
@@ -77,5 +77,20 @@ class CadastrosController < ApplicationController
     end
   end
   
+  
+  def ajax_buscar_concessionario_cpf
+    @requerente = Requerente.find_by(cpf: params[:concessionario_CPF])
+    if @requerente 
+      
+      @municipe = @requerente.municipe
+      @concessionario = Concessionario.find_by(requerente_id:@requerente.id)
+      
+      respond_to do |format|
+        format.js { render :file => "/cadastros/partials/renovacao/ajax_buscar_concessionario_cpf.js" }
+      end
+    else
+      # exibir mensagem que não achou
+    end
+  end
   
 end

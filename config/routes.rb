@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   
   post 'ajax_renovacao_lote'  => 'cadastros#ajax_renovacao_lote'
   post 'ajax_buscar_requerente_cpf'  => 'cadastros#ajax_buscar_requerente_cpf'
+  post 'ajax_buscar_concessionario_cpf'  => 'cadastros#ajax_buscar_concessionario_cpf'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

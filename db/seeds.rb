@@ -38,7 +38,7 @@ requerente_mario = Requerente.create(CPF: '15962362377', dt_nascimento: '25/12/1
     nacionalidade: 'Brasileiro', estado: 'SP', estado_civil: 'Viúvo(a)', profissao: 'Taxista', celular: '99989-9669', email: 'mario.augusto@cibel.com', municipe: municipe_mario)
 
 #CADASTRO DE CONCESSIONÁRIO
-concessionario_joao = Concessionario.create(requerente: requerente_mario)
+concessionario_joao = Concessionario.create(requerente: requerente_joao)
 concessionario_maria = Concessionario.create(requerente: requerente_maria)
 
 # CADASTRO DE CEMITÉROS (V. Formosa I, V. Formosa II e São Luis, não estão na lista por serem cemitérios jardins e não oferecerem concessões de terrenos)
@@ -64,10 +64,10 @@ Cemiterio.create(nome:'Vila Nova Cachoeirinha', endereco: 'Rua João Marcelino B
 
 
 #CADASTRO DE LOTES
-lote1 = Lote.create(quadra:'2', terreno: '147', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'livre', cemiterio: dom_bosco)
-lote2 = Lote.create(quadra:'2', terreno: '732', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'concedido', concessionario: concessionario_joao, cemiterio: dom_bosco)
-lote3 = Lote.create(quadra:'3', terreno: '19', gleba: '1', rua: '7', largura: 160, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'concedido', concessionario: concessionario_maria, cemiterio: dom_bosco)
-lote4 = Lote.create(quadra:'8', terreno: '195', gleba: '1', largura: 160, comprimento: 2.30, tipo_construcao: 'Capela', estado: 'livre', cemiterio: dom_bosco)
+lote1 = Lote.create(quadra:'2', terreno: '147', gleba: '1', largura: 1.60, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'livre', cemiterio: dom_bosco)
+lote2 = Lote.create(quadra:'2', terreno: '732', gleba: '1', largura: 1.60, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'concedido', concessionario: concessionario_joao, cemiterio: dom_bosco)
+lote3 = Lote.create(quadra:'3', terreno: '19', gleba: '1', rua: '7', largura: 1.60, comprimento: 2.30, tipo_construcao: 'Carneiro', estado: 'concedido', concessionario: concessionario_maria, cemiterio: dom_bosco)
+lote4 = Lote.create(quadra:'8', terreno: '195', gleba: '1', largura: 1.60, comprimento: 2.30, tipo_construcao: 'Capela', estado: 'livre', cemiterio: dom_bosco)
 
 
 #CADASTRO DE PROCESSO GERAL
