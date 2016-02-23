@@ -6,7 +6,7 @@ jQuery ->
       	when 1 then	$('#requerente_CPF').focus()
       	when 2 then $('#lote_cemiterio_id').focus() and $('#concessionario_requerente_CPF').focus()
       	when 3 then $('#lote_cemiterio_id').focus()
-      	when 4 calcular_pagamento()
+      	when 4 then calcular_pagamento()
       	else
     onTabClick: (tab, navigation, index) ->
       false
