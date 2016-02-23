@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get  'renovacao'            => 'cadastros#renovacao'
   post 'renovacao_form'       => 'cadastros#renovacao_form'
   post 'ajax_renovacao_lote'  => 'cadastros#ajax_renovacao_lote'
+  post 'ajax_buscar_requerente_cpf'  => 'cadastros#ajax_buscar_requerente_cpf'
+  
   post 'novo_lote_modal'      => 'cadastros#novo_lote_modal'
 
   # The priority is based upon order of creation: first created -> highest priority.
