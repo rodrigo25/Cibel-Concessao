@@ -66,9 +66,32 @@ jQuery ->
   checkbox_change("requerente_estado")
   
   
-  $("#ajax_consessionario_buscar").click ->
+  $("#ajax_concessionario_buscar").click ->
     $.post("/ajax_buscar_concessionario_cpf",
       {
         concessionario_CPF: $('#concessionario_requerente_CPF').val()
       }
     )
+    
+  
+  $("#ajax_concessionario_limpar").click ->
+    $('#concessionario_requerente_CPF').val("").prop("disabled", false).focus();
+    $('#concessionario_municipe_nome').val("").prop("disabled", false);
+    $('#concessionario_municipe_RG').val("").prop("disabled", false);
+    $('#concessionario_requerente_dt_nascimento').val("").prop("disabled", false);
+    $('#concessionario_requerente_estado_civil').val("").prop("disabled", false);
+    $('#concessionario_requerente_nacionalidade').val("").prop("disabled", false);
+    $('#concessionario_requerente_profissao').val("").prop("disabled", false);
+    $('#concessionario_dt_obito').val("").prop("disabled", false);
+    $('#concessionario_requerente_email').val("").prop("disabled", false);
+    $('#concessionario_municipe_telefone').val("").prop("disabled", false);
+    $('#concessionario_requerente_celular').val("").prop("disabled", false);
+    $('#concessionario_requerente_CEP').val("").prop("disabled", false);
+    $('#concessionario_municipe_rua').val("").prop("disabled", false);
+    $('#concessionario_municipe_numero').val("").prop("disabled", false);
+    $('#concessionario_municipe_complemento').val("").prop("disabled", false);
+    $('#concessionario_requerente_bairro').val("").prop("disabled", false);
+    $('#concessionario_requerente_cidade').val("").prop("disabled", false);
+    $('#concessionario_requerente_estado').val("").prop("disabled", false);
+  
+  
