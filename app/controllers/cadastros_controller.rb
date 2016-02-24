@@ -59,9 +59,9 @@ class CadastrosController < ApplicationController
     @valor_lote = ActionController::Base.helpers.number_to_currency(@valor_categoria * @metros_quadrados)
     @metros_quadrados = ActionController::Base.helpers.number_with_precision(@metros_quadrados, :precision => 1)
     @valor_gaveta = ActionController::Base.helpers.number_to_currency(@taxa_gaveta * @quantidade_gaveta)
-    @valor_gaveta = "R$ 00.00" if @quantidade_gaveta == 0
+    @valor_gaveta = "R$ 00,00" if @quantidade_gaveta == 0
     @valor_ossario = ActionController::Base.helpers.number_to_currency(@taxa_ossario * @quantidade_ossario)
-    @valor_ossario = "R$ 00.00" if @quantidade_ossario == 0
+    @valor_ossario = "R$ 00,00" if @quantidade_ossario == 0
     @taxa_expediente = ActionController::Base.helpers.number_to_currency(Taxa.find_by(tipo: "Expediente").valor)
     @taxa_carta = ActionController::Base.helpers.number_to_currency(Taxa.find_by(tipo: "Carta de Concessão").valor)
     # resultados //
