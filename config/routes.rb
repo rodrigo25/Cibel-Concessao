@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get  'renovacao'                 => 'cadastros#renovacao'
   post 'renovacao_form'            => 'cadastros#renovacao_form'
   post 'ajax_lote'                 => 'cadastros#ajax_lote'
+  post 'ajax_tipo_concessao_cemiterio' => 'cadastros#ajax_tipo_concessao_cemiterio'
   post 'novo_lote_modal'           => 'cadastros#novo_lote_modal'
   post 'ajax_pagamento'            => 'cadastros#ajax_pagamento'
   

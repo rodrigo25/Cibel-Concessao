@@ -14,7 +14,7 @@
   			  
           <div class="col-xs-3">
             <% if params[:action] == 'concessao' %>
-              <%= select_tag "lote[cemiterio_id]", options_for_select(cemiterios_indeterminados), :prompt => "", class:"form-control" %>
+              <%= select_tag "lote[cemiterio_id]", options_for_select(cemiterios), :prompt => "", class:"form-control" %>
             <% elsif params[:action] == 'renovacao' %>
               <%= select_tag "lote[cemiterio_id]", options_for_select(cemiterios_determinados), :prompt => "", class:"form-control" %>
             <% end %>
@@ -122,8 +122,6 @@
           </div>
         </div>
   			    
-  			    
-  			    
         
         
   			<div class="form-group row">
@@ -137,13 +135,14 @@
     	      <div class="col-sm-3">
       	      <%= text_field_tag "lote[qtd_ossario]", nil, class:"form-control" %>
   				  </div>
-  				  
-  				  <label for="tempo concessao" class="col-sm-3 control-label">tempo concessao:</label>
-    	      <div class="col-sm-3">
-      	      <%= text_field_tag "tempo_concessao", nil, class:"form-control" %>
-  				  </div>
-  			  </div>
-  			 </div>
+          </div>
+          <div class="col-sm-5">
+            <label class="col-sm-4 control-label">Tempo concessao:</label>
+            <div class="col-sm-6">
+              <%= select_tag "concessao_renovacao[periodo_concessao]", options_for_select([ "", "05 Anos", "25 Anos", "Indeterminada"]), class:"form-control" %>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>

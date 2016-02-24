@@ -4,6 +4,7 @@ jQuery ->
   $('#lote_tipo_construcao').prop("disabled", true)
   $('#lote_qtd_gaveta').prop("disabled", true)
   $('#lote_qtd_ossario').prop("disabled", true)
+  $('#concessao_renovacao_periodo_concessao').prop("disabled", true)
   
   $("#ajax_renovacao_lote_buscar").click ->
     $('#lote_largura').val("")
@@ -19,6 +20,11 @@ jQuery ->
         gleba: $('#lote_gleba').val()
         rua: $('#lote_rua').val()
         avenida: $('#lote_avenida').val()
+      }
+    )
+    $.post("/ajax_tipo_concessao_cemiterio",
+      {
+        cemiterio_id: $('#lote_cemiterio_id').val()
       }
     )
   

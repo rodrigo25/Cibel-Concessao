@@ -100,4 +100,13 @@ class CadastrosController < ApplicationController
     end
   end
   
+  def ajax_tipo_concessao_cemiterio
+    
+    @cemit = Cemiterio.find_by(id: params[:cemiterio_id])
+    
+    respond_to do |format|
+      format.js { render :file => "/cadastros/partials/renovacao/ajax_tipo_concessao_cemiterio.js" }
+    end
+  end
+  
 end

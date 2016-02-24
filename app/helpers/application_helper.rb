@@ -39,6 +39,14 @@ module ApplicationHelper
     ]
   end
   
+  def cemiterios
+    cemits = []
+    Cemiterio.all.each do |c|
+      cemits << [c.nome, c.id]
+    end
+    cemits
+  end
+  
   def cemiterios_indeterminados
     cemits = []
     Cemiterio.all.each do |c|

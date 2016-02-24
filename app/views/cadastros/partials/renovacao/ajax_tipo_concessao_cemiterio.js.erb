@@ -1,0 +1,7 @@
+if("<%= @cemit.prazo_concessao.downcase %>" == "determinado"){
+  $('#concessao_renovacao_periodo_concessao').empty().prop("disabled", false);
+  $('#concessao_renovacao_periodo_concessao').append("<option value=''></option><option value='1'>5 Anos</option><option value='2'>25 Anos</option>");
+}else{
+  $('#concessao_renovacao_periodo_concessao').empty();
+  $('#concessao_renovacao_periodo_concessao').append("<option value='1'>INDETERMINADO</option>");
+}
