@@ -161,7 +161,7 @@
             <div class=col-md-4>
               <label class="control-label">Cemitério:</label>
             <% if params[:action] == 'concessao' %>
-              <%= select_tag "novo_lote[cemiterio_id]", options_for_select(cemiterios_indeterminados), :prompt => "", class:"form-control" %>
+              <%= select_tag "novo_lote[cemiterio_id]", options_for_select(cemiterios), :prompt => "", class:"form-control" %>
             <% elsif params[:action] == 'renovacao' %>
               <%= select_tag "novo_lote[cemiterio_id]", options_for_select(cemiterios_determinados), :prompt => "", class:"form-control" %>
             <% end %>

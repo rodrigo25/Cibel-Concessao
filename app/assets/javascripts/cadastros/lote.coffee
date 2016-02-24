@@ -79,6 +79,26 @@ jQuery ->
         qtd_ossario: $('#novo_lote_qtd_ossario').val()
       }
     )
+    $('#lote_cemiterio_id').val($('#novo_lote_cemiterio_id').val()).prop("disabled", true)
+    $('#lote_quadra').val($('#novo_lote_quadra').val()).prop("disabled", true)
+    $('#lote_terreno').val($('#novo_lote_terreno').val()).prop("disabled", true)
+    $('#lote_gleba').val($('#novo_lote_gleba').val()).prop("disabled", true)
+    $('#lote_rua').val($('#novo_lote_rua').val()).prop("disabled", true)
+    $('#lote_avenida').val($('#novo_lote_avenida').val()).prop("disabled", true)
+    $('#corpo_tabela').html("")
+    #$('#corpo_tabela').append("<tr data-cemiterio=<%= lote.cemiterio.nome %> data-largura=<%= lote.largura %> data-comprimento=<%= lote.comprimento %> data-tipo_construcao=<%= lote.tipo_construcao %> data-qtd_gaveta=<%= lote.qtd_gaveta %> data-qtd_ossario=<%= lote.qtd_ossario %> > <td class='quadra'><%= lote.quadra %></td> <td class='terreno'><%= lote.terreno %></td> <td class='gleba'><%= lote.gleba %></td> <td class='rua'><%= lote.rua %></td> <td class='avenida'><%= lote.avenida %></td> <td class='concessionario'><%= conc %></td> <td class='estado'><%= lote.estado %></td> </tr>");
+    $('#lote_largura').val($('#novo_lote_largura').val()).prop("disabled", true)
+    $('#lote_comprimento').val($('#novo_lote_comprimento').val()).prop("disabled", true)
+    $('#lote_tipo_construcao').val($('#novo_lote_tipo_construcao').val()).prop("disabled", true)
+    if $('#novo_lote_qtd_gaveta').val().trim().length != 0
+      $('#lote_qtd_gaveta').val($('#novo_lote_qtd_gaveta').val()).prop("disabled", true) 
+    else
+      $('#lote_qtd_gaveta').val("0").prop("disabled", true)
+    if $('#novo_lote_qtd_ossario').val().trim().length != 0
+      $('#lote_qtd_ossario').val($('#novo_lote_qtd_ossario').val()).prop("disabled", true)
+    else
+      $('#lote_qtd_ossario').val("0").prop("disabled", true)
+    
     
   
   $('#ajax_renovacao_lote_limpar').click ->
