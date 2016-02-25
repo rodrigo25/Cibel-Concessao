@@ -20,7 +20,7 @@ class CadastrosController < ApplicationController
                         params[:cemiterio_id], params[:quadra], params[:terreno], params[:gleba], params[:rua], params[:avenida] 
                        )
     respond_to do |format|
-      format.js { render :file => "/cadastros/partials/ajax_lote.js" }
+      format.js { render :file => "/cadastros/partials/ajax/ajax_lote.js" }
     end
   end
   
@@ -30,7 +30,7 @@ class CadastrosController < ApplicationController
                 avenida: params[:avenida], largura: params[:largura], comprimento: params[:comprimento],
                 tipo_construcao: params[:tipo_construcao], qtd_gaveta: params[:qtd_gaveta], qtd_ossario: params[:qtd_ossario])
     respond_to do |format|
-      format.js { render :file => "/cadastros/partials/novo_lote_modal.js" }
+      format.js { render :file => "/cadastros/partials/ajax/ajax_novo_lote_modal.js" }
     end
   end
   
@@ -67,7 +67,7 @@ class CadastrosController < ApplicationController
     # resultados //
     
     respond_to do |format|
-      format.js { render :file => "/cadastros/partials/ajax_pagamento.js" }
+      format.js { render :file => "/cadastros/partials/ajax/ajax_pagamento.js" }
     end
   end
   
@@ -77,7 +77,7 @@ class CadastrosController < ApplicationController
     if @requerente 
       @municipe = @requerente.municipe
       respond_to do |format|
-        format.js { render :file => "/cadastros/partials/renovacao/ajax_buscar_requerente_cpf.js" }
+        format.js { render :file => "/cadastros/partials/ajax/ajax_buscar_requerente_cpf.js" }
       end
     else
       # exibir mensagem que não achou
@@ -93,7 +93,7 @@ class CadastrosController < ApplicationController
       @concessionario = Concessionario.find_by(requerente_id:@requerente.id)
       
       respond_to do |format|
-        format.js { render :file => "/cadastros/partials/renovacao/ajax_buscar_concessionario_cpf.js" }
+        format.js { render :file => "/cadastros/partials/ajax/ajax_buscar_concessionario_cpf.js" }
       end
     else
       # exibir mensagem que não achou
@@ -105,7 +105,7 @@ class CadastrosController < ApplicationController
     @cemit = Cemiterio.find_by(id: params[:cemiterio_id])
     
     respond_to do |format|
-      format.js { render :file => "/cadastros/partials/renovacao/ajax_tipo_concessao_cemiterio.js" }
+      format.js { render :file => "/cadastros/partials/ajax/ajax_tipo_concessao_cemiterio.js" }
     end
   end
   
